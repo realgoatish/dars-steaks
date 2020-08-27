@@ -1,9 +1,31 @@
 ---
 new_page_extension: md
 auto_deploy: false
-admin_path: 
+admin_path: "/static/admin"
 webhook_url: 
-sections: 
+sections:
+- type: heading
+  label: Menu Page
+- type: directory
+  path: markdowns/menu/steaks
+  label: Steaks
+  create: documents
+  match: "*.md"
+- type: directory
+  path: markdowns/menu/extras
+  label: Extras
+  create: documents
+  match: "*.md"
+- type: directory
+  path: markdowns/menu/fries
+  label: Fries
+  create: documents
+  match: "*.md"
+- type: directory
+  path: markdowns/menu/gyro
+  label: Gyro
+  create: documents
+  match: "*.md"
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''
@@ -14,4 +36,4 @@ build:
   preview_docker_image: forestryio/node:12
   mount_path: "/srv"
   working_dir: "/srv"
-  instant_preview_command: npm run develop
+  instant_preview_command: gridsome develop
