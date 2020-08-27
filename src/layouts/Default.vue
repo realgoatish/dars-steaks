@@ -1,11 +1,13 @@
 <template lang="pug">
   div(class="layout")
-    header(class="header")
-      strong
-        g-link(to="/") {{ $static.metadata.siteName }}
-      nav(class="nav")
-        g-link(class="nav__link" to="/") Home
-        g-link(class="nav__link" to="/about/") About
+    div(class="section header")
+      div(class="container")
+        header(class="flex")
+          strong
+            g-link(to="/") {{ $static.metadata.siteName }}
+          nav(class="nav")
+            g-link(class="nav__link" to="/") Home
+            g-link(class="nav__link" to="/menu/") Menu
     slot
 </template>
 
@@ -17,27 +19,29 @@ query {
 }
 </static-query>
 
-<style>
-body {
-  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-  margin:0;
-  padding:0;
-  line-height: 1.5;
+<style scoped>
+
+/* .layout {
+
+} */
+
+/* set padding and background color with .section class coupled with .header class (describing the section) */
+.section.header {
+  padding: 2rem;
+  background: #000000;
+  color: #1F85B7;
 }
 
-.layout {
-  max-width: 760px;
-  margin: 0 auto;
-  padding-left: 20px;
-  padding-right: 20px;
+.header a {
+  color: white;
 }
 
-.header {
+.flex {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
-  height: 80px;
+  /* margin-bottom: 20px;
+  height: 80px; */
 }
 
 .nav__link {
