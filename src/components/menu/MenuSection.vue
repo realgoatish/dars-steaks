@@ -3,7 +3,7 @@
   article
     h1 {{ sectionPrimaryTitle }}
     //
-      8.25.2020 this template only applies to main menu subtext and Fries section subtext
+      8.25.2020 this template only applies to main menu subtext
     template(v-if="sectionPrimarySubtext")
       div
         p {{ sectionPrimarySubtext }}
