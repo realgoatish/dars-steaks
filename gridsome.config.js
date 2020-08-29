@@ -24,6 +24,17 @@ module.exports = {
       }
     },
     {
+      use: '@gridsome/source-filesystem',
+      options: {
+        path: 'markdowns/global-layout/*.md',
+        typeName: 'GlobalLayout',
+        resolveAbsolutePaths: true,
+        remark: {
+          externalLinksRel: ['nofollow', 'noopener', 'noreferrer']
+        }
+      }
+    },
+    {
       use: '@gridsome/plugin-critical',
       options: {
         paths: ['/'],
@@ -34,9 +45,9 @@ module.exports = {
   ],
   chainWebpack: config => {
     config.module
-      .rule('pug')
-      .test(/\.pug$/)
-      .use('pug-plain-loader')
-      .loader('pug-plain-loader')
+    .rule('pug')
+    .test(/\.pug$/)
+    .use('pug-plain-loader')
+    .loader('pug-plain-loader')
   }
 }
