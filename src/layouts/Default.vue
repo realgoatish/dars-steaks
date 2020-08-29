@@ -3,8 +3,8 @@
     div(class="section header")
       div(class="container")
         header(class="flex")
-          strong
-            g-link(to="/") {{ $static.metadata.siteName }}
+          div.test
+            g-image(alt="Example image" :src="$static.header.logo")
           nav(class="nav")
             g-link(class="nav__link" to="/") Home
             g-link(class="nav__link" to="/menu/") Menu
@@ -16,6 +16,12 @@ query {
   metadata {
     siteName
   }
+  header: globalLayout (path: "/markdowns/global-layout/header") {
+    logo(
+      quality: 90
+      width: 405
+    )
+  }
 }
 </static-query>
 
@@ -24,6 +30,15 @@ query {
 /* .layout {
 
 } */
+/*
+color: #004BAD <== Menu Section Titles Blue
+color: #542825 <== Menu Item Descriptions burnt red
+color: #EC2825 <== Dar's Steaks letters red
+*/
+
+div.test {
+  width: 15rem;
+}
 
 /* set padding and background color with .section class coupled with .header class (describing the section) */
 .section.header {
