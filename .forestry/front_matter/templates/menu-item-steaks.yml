@@ -14,4 +14,6 @@ fields:
 - type: textarea
   name: description
   label: Description
-- type: 
+- type: file
+  name: itemImage
+  label: Item Image
