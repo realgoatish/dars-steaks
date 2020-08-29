@@ -1,2 +1,2 @@
 ---
-logo: "./../../uploads/dars-steaks-serif.png"
+logo: "./../../../uploads/dars-steaks-serif.png"
