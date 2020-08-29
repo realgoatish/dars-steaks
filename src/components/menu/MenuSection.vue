@@ -42,9 +42,7 @@
           p(
             v-if="item.node.description"
           ) {{ item.node.description }}
-
-
-  
+          
 </template>
 
 <script>
