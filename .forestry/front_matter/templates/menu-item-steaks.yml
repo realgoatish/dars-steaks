@@ -1,0 +1,16 @@
+---
+label: Menu Item - Steaks
+hide_body: false
+fields:
+- type: number
+  name: number
+  label: Order of Appearance
+- type: text
+  name: itemName
+  label: Item Name
+- type: text
+  name: price
+  label: Price
+- type: text
+  name: description
+  label: Description

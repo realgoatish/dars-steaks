@@ -77,7 +77,6 @@ query {
   }
   friesHeaders: menuContent (path: "/markdowns/menu/fries/headers") {
     title
-    subTitle
   }
   friesContent: allMenuContent(
     filter: {
