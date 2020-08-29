@@ -11,6 +11,6 @@ fields:
 - type: text
   name: price
   label: Price
-- type: text
+- type: textarea
   name: description
   label: Description
