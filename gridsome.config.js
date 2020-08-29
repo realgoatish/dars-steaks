@@ -26,7 +26,7 @@ module.exports = {
     {
       use: '@gridsome/source-filesystem',
       options: {
-        path: 'markdowns/global-layout/*.md',
+        path: 'markdowns/global-layout/**/*.md',
         typeName: 'GlobalLayout',
         resolveAbsolutePaths: true,
         remark: {

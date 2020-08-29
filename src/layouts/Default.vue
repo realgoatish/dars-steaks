@@ -16,7 +16,7 @@ query {
   metadata {
     siteName
   }
-  header: globalLayout (path: "/markdowns/global-layout/header") {
+  header: globalLayout (path: "/markdowns/global-layout/header/content") {
     logo(
       quality: 90
       width: 405

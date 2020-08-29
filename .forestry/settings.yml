@@ -5,6 +5,13 @@ admin_path: "/static/admin"
 webhook_url: 
 sections:
 - type: heading
+  label: Global Layout
+- type: directory
+  path: markdowns/global-layout/header
+  label: Header
+  create: documents
+  match: "*.md"
+- type: heading
   label: Menu Page
 - type: directory
   path: markdowns/menu/steaks
