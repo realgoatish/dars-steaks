@@ -35,6 +35,17 @@ module.exports = {
       }
     },
     {
+      use: '@gridsome/source-filesystem',
+      options: {
+        path: 'markdowns/home-page/*.md',
+        typeName: 'HomePage',
+        resolveAbsolutePaths: true,
+        remark: {
+          externalLinksRel: ['nofollow', 'noopener', 'noreferrer']
+        }
+      }
+    },
+    {
       use: '@gridsome/plugin-critical',
       options: {
         paths: ['/'],
