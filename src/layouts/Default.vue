@@ -69,7 +69,7 @@ color: #EC2825 <== Dar's Steaks letters red
 
 .social-icons {
   padding-top: 0.8rem;
-  width: 115px;
+  width: 115px; /* Want a fixed width here because relative width makes it expand and contract awkwardly in the layout */
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
