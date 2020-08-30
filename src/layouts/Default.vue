@@ -3,11 +3,20 @@
     div(class="section header")
       div(class="container")
         header(class="flex")
-          div.test
-            g-image(alt="Example image" :src="$static.header.logo")
-          nav(class="nav")
-            g-link(class="nav__link" to="/") Home
-            g-link(class="nav__link" to="/menu/") Menu
+          section(class="left flex")
+            g-image(:alt="$static.header.logoAltText" :src="$static.header.logo")
+            section(class="social-icons flex")
+              a(:href="$static.header.facebookLink")
+                g-image(:alt="$static.header.facebookAltText" :src="$static.header.facebookIcon")
+              a(:href="$static.header.instagramLink")
+                g-image(:alt="$static.header.instagramAltText" :src="$static.header.instagramIcon")
+              a(:href="$static.header.emailLink")
+                g-image(:alt="$static.header.emailAltText" :src="$static.header.emailIcon")
+          g-image(:alt="$static.header.hamburgerMenuAltText" :src="$static.header.hamburgerMenu")
+
+          //- nav(class="nav")
+          //-   g-link(class="nav__link" to="/") Home
+          //-   g-link(class="nav__link" to="/menu/") Menu
     slot
 </template>
 
@@ -20,7 +29,24 @@ query {
     logo(
       quality: 90
       width: 405
+      height: 120
     )
+    logoAltText
+    hamburgerMenu(
+      quality: 60
+      width: 36
+      height: 24
+    )
+    hamburgerMenuAltText
+    instagramIcon
+    instagramLink
+    instagramAltText
+    facebookIcon
+    facebookLink
+    facebookAltText
+    emailIcon
+    emailLink
+    emailAltText
   }
 }
 </static-query>
@@ -36,13 +62,31 @@ color: #542825 <== Menu Item Descriptions burnt red
 color: #EC2825 <== Dar's Steaks letters red
 */
 
-div.test {
+.left {
   width: 15rem;
+  flex-flow: column nowrap;
+}
+
+.social-icons {
+  padding-top: 0.8rem;
+  width: 115px;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social-icons a {
+  display: block;
+}
+
+.social-icons img {
+  display: block;
+  height: 100%;
 }
 
 /* set padding and background color with .section class coupled with .header class (describing the section) */
 .section.header {
-  padding: 2rem;
+  padding: 1rem;
   background: #000000;
   color: #1F85B7;
 }
@@ -55,11 +99,15 @@ div.test {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* margin-bottom: 20px;
-  height: 80px; */
 }
 
-.nav__link {
+/* .nav__link {
   margin-left: 20px;
-}
+} */
+
+/* @media (min-width: 960px) {
+  nav.nav {
+    display: none;
+  }
+} */
 </style>
