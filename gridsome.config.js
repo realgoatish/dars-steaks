@@ -19,7 +19,8 @@ module.exports = {
         typeName: 'MenuContent',
         resolveAbsolutePaths: true,
         remark: {
-          externalLinksRel: ['nofollow', 'noopener', 'noreferrer']
+          externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
+          autolinkHeadings: false
         }
       }
     },
@@ -30,7 +31,8 @@ module.exports = {
         typeName: 'GlobalLayout',
         resolveAbsolutePaths: true,
         remark: {
-          externalLinksRel: ['nofollow', 'noopener', 'noreferrer']
+          externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
+          autolinkHeadings: false
         }
       }
     },
@@ -41,7 +43,8 @@ module.exports = {
         typeName: 'HomePage',
         resolveAbsolutePaths: true,
         remark: {
-          externalLinksRel: ['nofollow', 'noopener', 'noreferrer']
+          externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
+          autolinkHeadings: false
         }
       }
     },
