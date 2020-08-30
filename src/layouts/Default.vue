@@ -58,8 +58,9 @@ query {
 } */
 /*
 color: #004BAD <== Menu Section Titles Blue
+color: #1F85B7 <== Dar's Steaks Logo design Lighter blue
 color: #542825 <== Menu Item Descriptions burnt red
-color: #EC2825 <== Dar's Steaks letters red
+color: #EC2825 <== Dar's Steaks Logo letters red
 */
 
 .left {
