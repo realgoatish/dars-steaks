@@ -16,7 +16,7 @@
           v-on:click="toggle('ranking')"
           v-bind:class="{'open' : dropDowns.ranking.open}"
         )
-          a(class="menu__link menu__link--toggle" href="#")
+          div(class="menu__link menu__link--toggle")
             g-image(
               class="hamburger-menu"
               :alt="$static.header.hamburgerMenuAltText"
