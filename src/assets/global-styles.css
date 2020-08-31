@@ -68,3 +68,7 @@ footer {
 img {
   max-width: 100%;
 }
+
+.container {
+  padding: 1rem;
+}
