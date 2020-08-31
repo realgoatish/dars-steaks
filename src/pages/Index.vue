@@ -37,7 +37,7 @@ query {
   sectionThree: homePage (path: "/markdowns/home-page/section-three/content") {
     content
   }
-  mobileImage: menuContent(path: "/markdowns/menu/steaks/cheesesteak") {
+  mobileImage: menuContent (path: "/markdowns/menu/steaks/cheesesteak") {
     itemImage(
       quality: 100
       width: 1000
@@ -170,6 +170,8 @@ figure.mobile-image-wrapper {
   width: 100%;
   border-top: 5px #EC2825 solid;
   border-bottom: 5px #EC2825 solid;
+  /* Safari hack to prevent bottom gap between figure and image */
+  line-height: 0;
 }
 
 /* Make the mobile image take up its whole parent <figure> container */
