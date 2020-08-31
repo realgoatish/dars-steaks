@@ -1,18 +1,17 @@
 <template lang="pug">
   div(class="layout")
-    div(class="section header")
-      div(class="container")
-        header(class="flex")
-          section(class="left flex")
-            g-image(:alt="$static.header.logoAltText" :src="$static.header.logo")
-            section(class="social-icons flex")
-              a(:href="$static.header.facebookLink")
-                g-image(:alt="$static.header.facebookAltText" :src="$static.header.facebookIcon")
-              a(:href="$static.header.instagramLink")
-                g-image(:alt="$static.header.instagramAltText" :src="$static.header.instagramIcon")
-              a(:href="$static.header.emailLink")
-                g-image(:alt="$static.header.emailAltText" :src="$static.header.emailIcon")
-          g-image(:alt="$static.header.hamburgerMenuAltText" :src="$static.header.hamburgerMenu")
+    section(class="container header")
+      header(class="flex")
+        section(class="left flex")
+          g-image(:alt="$static.header.logoAltText" :src="$static.header.logo")
+          section(class="social-icons flex")
+            a(:href="$static.header.facebookLink")
+              g-image(:alt="$static.header.facebookAltText" :src="$static.header.facebookIcon")
+            a(:href="$static.header.instagramLink")
+              g-image(:alt="$static.header.instagramAltText" :src="$static.header.instagramIcon")
+            a(:href="$static.header.emailLink")
+              g-image(:alt="$static.header.emailAltText" :src="$static.header.emailIcon")
+        g-image(:alt="$static.header.hamburgerMenuAltText" :src="$static.header.hamburgerMenu")
 
           //- nav(class="nav")
           //-   g-link(class="nav__link" to="/") Home
@@ -85,9 +84,9 @@ color: #EC2825 <== Dar's Steaks Logo letters red
   height: 100%;
 }
 
-/* set padding and background color with .section class coupled with .header class (describing the section) */
-.section.header {
-  padding: 1rem;
+/* set padding and background color with .header class (describing the section) */
+section.header {
+  max-width: none;
   background: #000000;
   color: #1F85B7;
 }
