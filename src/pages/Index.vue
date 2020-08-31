@@ -3,7 +3,7 @@
     article(class="home-page-content flex")
       figure(class="mobile-image-wrapper")
         g-image(
-          :src="$page.mobileImage.itemImage.src"
+          :src="$page.mobileImage.itemImage"
         )
       section(class="home-page-text")
         section(class="section-one-wrapper container")
