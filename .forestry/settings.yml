@@ -12,6 +12,13 @@ sections:
   create: documents
   match: "*.md"
 - type: heading
+  label: Home Page
+- type: directory
+  path: markdowns/home-page/section-one
+  label: Section One
+  create: documents
+  match: "*.md"
+- type: heading
   label: Menu Page
 - type: directory
   path: markdowns/menu/steaks

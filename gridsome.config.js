@@ -19,7 +19,8 @@ module.exports = {
         typeName: 'MenuContent',
         resolveAbsolutePaths: true,
         remark: {
-          externalLinksRel: ['nofollow', 'noopener', 'noreferrer']
+          externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
+          autolinkHeadings: false
         }
       }
     },
@@ -30,7 +31,20 @@ module.exports = {
         typeName: 'GlobalLayout',
         resolveAbsolutePaths: true,
         remark: {
-          externalLinksRel: ['nofollow', 'noopener', 'noreferrer']
+          externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
+          autolinkHeadings: false
+        }
+      }
+    },
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        path: 'markdowns/home-page/**/*.md',
+        typeName: 'HomePage',
+        resolveAbsolutePaths: true,
+        remark: {
+          externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
+          autolinkHeadings: false
         }
       }
     },

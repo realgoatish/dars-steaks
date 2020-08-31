@@ -42,6 +42,16 @@
           p(
             v-if="item.node.description"
           ) {{ item.node.description }}
+          figure(
+            v-if="item.node.itemImage"
+          )
+            a(
+              :href="item.node.itemImage.src"
+            )
+              g-image(
+                :alt="item.node.itemName"
+                :src="item.node.itemImage.src"
+              )
           
 </template>
 

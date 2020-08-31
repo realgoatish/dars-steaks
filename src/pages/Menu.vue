@@ -53,6 +53,12 @@ query {
         itemName
         price
         description
+        itemImage(
+          width: 500
+          height: 500
+          quality: 90
+          fit: outside
+        )
       }
     }
   }
