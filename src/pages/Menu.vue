@@ -12,7 +12,9 @@
         v-show="currentSection === $page.steaksHeaders.title"
         :sectionPrimaryTitle="$page.steaksHeaders.title"
         :chooseProtein="$page.steaksHeaders.chooseProtein"
+        :proteinChoices="$page.steaksHeaders.proteinChoices"
         :chooseRoll="$page.steaksHeaders.chooseRoll"
+        :rollChoices="$page.steaksHeaders.rollChoices"
         :sectionMenuItems="$page.steaksContent.edges"
       )
       MenuSection(
@@ -38,7 +40,9 @@ query {
   steaksHeaders: menuContent (path: "/markdowns/menu/steaks/headers") {
     title
     chooseProtein
+    proteinChoices
     chooseRoll
+    rollChoices
   }
   steaksContent: allMenuContent(
     filter: {

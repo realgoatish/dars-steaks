@@ -3,7 +3,7 @@
     article(class="home-page-content flex")
       figure(class="mobile-image-wrapper")
         g-image(
-          :src="$page.mobileImage.itemImage.src"
+          :src="$page.mobileImage.itemImage"
         )
       section(class="home-page-text")
         section(class="section-one-wrapper container")
@@ -61,14 +61,6 @@ export default {
 </script>
 
 <style>
-
-h1 {
-  font-size: 150%;
-}
-
-h2 {
-  font-size: 125%;
-}
 
 p {
   font-weight:600;
@@ -170,8 +162,6 @@ figure.mobile-image-wrapper {
   width: 100%;
   border-top: 5px #EC2825 solid;
   border-bottom: 5px #EC2825 solid;
-  /* Safari hack to prevent bottom gap between figure and image */
-  line-height: 0;
 }
 
 /* Make the mobile image take up its whole parent <figure> container */

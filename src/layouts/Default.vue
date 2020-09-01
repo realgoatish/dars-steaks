@@ -148,11 +148,7 @@ section.header {
   color: #1F85B7;
 }
 
-.flex {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+
 
 /* DROPDOWN MENU STYLES */
 

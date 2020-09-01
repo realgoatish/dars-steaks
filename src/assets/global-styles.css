@@ -2,9 +2,9 @@
 	box-sizing: border-box;
 }
 
-* {
+/* * {
   max-width: 60ch;
-}
+} */
 
 :root {
   font-size: calc(1rem + 0.5vw)
@@ -65,10 +65,29 @@ footer {
   max-width: none;
 }
 
+figure {
+	/* Safari hack to prevent bottom gap between figure and image */
+	line-height: 0;
+}
+
+h1 {
+  font-size: 150%;
+}
+
+h2 {
+  font-size: 125%;
+}
+
 img {
   max-width: 100%;
 }
 
 .container {
   padding: 1rem;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
