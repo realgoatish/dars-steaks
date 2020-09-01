@@ -109,7 +109,8 @@ section.home-page-text >>> section * + * {
 }
 
 .section-three-wrapper {
-  background: #ed5c02;
+  background: #500f0f;
+  /* letter-spacing: 0.1ch; */
 }
 
 .section-two {
@@ -117,7 +118,7 @@ section.home-page-text >>> section * + * {
 }
 
 .section-three {
-  color: #000;
+  color: #d3effc;
 }
 
 .section-one >>> h1 {
@@ -153,7 +154,7 @@ section.home-page-text >>> section * + * {
 
 .section-three >>> h1 {
   /* color: #ff6100; */
-  text-shadow: 1px 1px 2px #fff;
+  text-shadow: 1px 1px #566272;
 }
 
 /* */
