@@ -75,13 +75,15 @@ p {
 section.home-page-text {
   width: 100%;
   max-width: none;
+  background-image: linear-gradient(#1F85B7, #EC2825, #004BAD);
 }
 
 section.home-page-text >>> section.container {
-  width: 100%;
+  width: 95%;
   max-width: none;
   padding-left: 0;
   padding-right: 0;
+  margin: 0 auto;
 }
 
 /* All <section> tags wrapping each home-page-section */
@@ -89,7 +91,7 @@ section.home-page-text >>> section.container {
   padding-top: 2rem;
   padding-bottom: 2rem;
   max-width: none;
-  width: 90%;
+  width: 95%;
   margin: 0 auto;
   /* text-align: center; */
 }
@@ -101,6 +103,10 @@ section.home-page-text >>> section + section {
 /* Padding between <h1>, <h2>, <p> within each text section */
 section.home-page-text >>> section * + * {
   padding-top: 0.8rem;
+}
+
+.section-one-wrapper {
+  background: #fff;
 }
 
 /* Need to set background colors for different sections on wrappers for each */
