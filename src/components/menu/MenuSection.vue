@@ -156,6 +156,10 @@ export default {
   padding-bottom: 0.3rem;
 }
 
+.itemTextWrapper >>> p {
+  font-size: 85%;
+}
+
 .steaksChoices {
   text-align: center;
   font-size: 80%;
@@ -190,8 +194,14 @@ export default {
 
 @media (min-width: 1200px) {
   .container {
-    max-width: 80%;
+    max-width: 60%;
     margin: 0 auto;
+  }
+}
+
+@media (min-width: 960px) {
+  .itemImageWrapper {
+    max-width: 20%;
   }
 }
 
