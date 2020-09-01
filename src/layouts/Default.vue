@@ -148,8 +148,6 @@ section.header {
   color: #1F85B7;
 }
 
-
-
 /* DROPDOWN MENU STYLES */
 
 .menu__item {
