@@ -123,6 +123,13 @@ query {
       }
     }
   }
+  info: metadata {
+    menu {
+      title
+      description
+    }
+    siteUrl
+  }
 }
 
 </page-query>
@@ -134,13 +141,32 @@ import MenuSection from '~/components/menu/MenuSection.vue'
 export default {
   metaInfo() {
     return {
-      title: 'Menu'
+      title: `${this.$page.info.menu.title}`,
+      link: [
+        {
+          rel: 'canonical', href: `${this.$page.info.siteUrl}${this.$route.fullPath}`
+        }
+      ],
+      meta: [
+        { property: 'og:title', content: `${this.$page.info.menu.title}` },
+        { property: 'og:type', content: 'website' },
+        { property: 'og:description', content: `${this.$page.info.menu.description}` },
+        { property: 'og:url', content: `${this.$page.info.siteUrl}${this.$route.fullPath}` },
+        { property: 'og:image', content: `${this.$page.info.siteUrl}${this.$page.steaksContent.edges[this.$page.steaksContent.edges.findIndex(x => x.node.itemName === 'Hot Chester')].node.itemImage.src}` },
+        { property: 'og:image:width', content: '1200' },
+        { property: 'og:image:height', content: '630' },
+        { name: 'description', content: `${this.$page.info.menu.description}` }
+      ]
     }
   },
   data() {
     return {
       menuSectionTitles: [],
-      currentSection: null
+      currentSection: null,
+      // reversedSteaksArray: () => {
+        
+      //   this.$page.steaksContent.edges.reverse()
+      // }
     }
   },
   created() {
@@ -148,6 +174,9 @@ export default {
     this.menuSectionTitles.push(this.$page.extrasHeaders.title)
     this.menuSectionTitles.push(this.$page.friesHeaders.title)
     this.menuSectionTitles.push(this.$page.gyroHeaders.title)
+  },
+  mounted() {
+    console.log(this.$route)
   },
   methods: {
     showSelectedSection(sectionTitle) {
