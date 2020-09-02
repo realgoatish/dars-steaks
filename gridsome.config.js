@@ -7,6 +7,7 @@
 module.exports = {
   siteName: `Dar's Steaks`,
   siteDescription: `Serving the World's Best Cheesesteaks in Haddon Township, NJ`,
+  siteUrl: 'https://www.darssteaks.com',
   permalinks: {
     trailingSlash: true
   },
