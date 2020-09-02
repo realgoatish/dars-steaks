@@ -189,7 +189,7 @@ export default {
   background-color: #f9c3c0;
 }
 
-.highlighted {
+.menuSections >>> .highlighted {
   background-color: #f9c3c0;
 }
 
