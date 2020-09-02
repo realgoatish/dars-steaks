@@ -1,0 +1,7 @@
+---
+label: Home Page Content Section
+hide_body: false
+fields:
+- type: file
+  name: image
+  label: Image

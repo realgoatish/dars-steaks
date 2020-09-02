@@ -18,6 +18,16 @@ sections:
   label: Section One
   create: documents
   match: "*.md"
+- type: directory
+  path: markdowns/home-page/section-two
+  label: Section Two
+  create: documents
+  match: "*.md"
+- type: directory
+  path: markdowns/home-page/section-three
+  label: Section Three
+  create: documents
+  match: "*.md"
 - type: heading
   label: Menu Page
 - type: directory
