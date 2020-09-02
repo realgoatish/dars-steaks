@@ -6,12 +6,19 @@
 
 module.exports = {
   siteName: `Dar's Steaks`,
-  siteDescription: `Serving the World's Best Cheesesteaks in Haddon Township, NJ`,
+  siteDescription: `Serving the World's Best Cheesesteaks in Westmont, NJ`,
+  titleTemplate: `%s | Dar's Steaks`,
   siteUrl: 'https://www.darssteaks.com',
   permalinks: {
     trailingSlash: true
   },
   icon: './uploads/dars-steaks-serif.png',
+  metadata: {
+    menu: {
+      title: `Menu`,
+      description: ``
+    }
+  },
   plugins: [
     {
       use: '@gridsome/source-filesystem',
