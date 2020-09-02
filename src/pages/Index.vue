@@ -79,26 +79,26 @@ section.home-page-text {
 }
 
 section.home-page-text >>> section.container {
-  width: 95%;
+  /* width: 95%; */
+  /* width: 100%; */
   max-width: none;
   padding-left: 0;
   padding-right: 0;
-  margin: 0 auto;
+  margin: 0.7rem 0.7rem;
 }
 
 /* All <section> tags wrapping each home-page-section */
 .section-one, .section-two, .section-three {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   max-width: none;
   width: 95%;
   margin: 0 auto;
-  /* text-align: center; */
 }
 /* Padding between text sections */
-section.home-page-text >>> section + section {
+/* section.home-page-text >>> section + section {
   padding-top: 3rem;
-}
+} */
 
 /* Padding between <h1>, <h2>, <p> within each text section */
 section.home-page-text >>> section * + * {
@@ -106,25 +106,23 @@ section.home-page-text >>> section * + * {
 }
 
 .section-one-wrapper {
+  color: #542825;
   background: #fff;
+  box-shadow: 1px 1px 2px #004BAD, -1px -1px 2px #004BAD;
 }
 
 /* Need to set background colors for different sections on wrappers for each */
 .section-two-wrapper {
+  color: white;
   background: #004BAD;
+  box-shadow: 1px 1px 2px, -1px -1px 2px;
 }
 
 .section-three-wrapper {
-  background: #500f0f;
-  /* letter-spacing: 0.1ch; */
-}
-
-.section-two {
-  color: white;
-}
-
-.section-three {
   color: #d3effc;
+  background: #500f0f;
+  box-shadow: 1px 1px 2px, -1px -1px 2px;
+
 }
 
 .section-one >>> h1 {
@@ -132,18 +130,9 @@ section.home-page-text >>> section * + * {
   text-shadow: 1px 1px 2px #1F85B7;
 }
 
-/* .section-one >>> span {
-  color: #004BAD;
-  text-shadow: 5px 2px 1px #1F85B7;
-} */
-
 .section-one >>> h2 {
   color: #000;
   text-shadow: 1px 1px 2px #f9c3c0;
-}
-
-.section-one >>> p {
-  color: #542825;
 }
 
 .section-two >>> p {
