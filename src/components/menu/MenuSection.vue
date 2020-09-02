@@ -143,13 +143,14 @@ export default {
   display: inline-block;
 }
 
-.itemImageWrapper, .itemImageWrapper >>> a, .itemImageWrapper >>> img {
+/* .itemImageWrapper, .itemImageWrapper >>> a, .itemImageWrapper >>> img {
   border-radius: 15px;
 }
 
 .itemImageWrapper >>> img {
   border: 2px solid #EC2825;
-}
+} */
+
 
 .itemTextWrapper >>> * + * {
   padding-top: 0.3rem;
