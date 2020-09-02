@@ -1,6 +1,10 @@
 ---
+image: ./../../../uploads/zeppole.jpeg
 ---
-# 12 Ounces of Protein
-## Home-Made Whiz
+# World's Best Cheesesteaks
 
-You think water moves fast? You should see ice. It moves like it has a mind. Like it knows it killed the world once and got a taste for murder. After the avalanche, it took us a week to climb out. Now, I don't know exactly when we turned on each other, but I know that seven of us survived the slide... and only five made it out. Now we took an oath, that I'm breaking now. We said we'd say it was the snow that killed the other two, but it wasn't. Nature is lethal but it doesn't hold a candle to man.
+We use only the best quality ribeye: gently shaved to small ribbons, left large enough for the perfect chew, but small enough to allow all your cheese and toppings to penetrate the entire steak.  
+  
+Here are Dar's Steaks, we know what it takes to make the best cheesesteak.  We don't have just one type of perfectly baked roll...we have *four*.  
+  
+And have we mentioned the whiz yet?  Our whiz is made in-house with our own special recipe and it tastes *addictive*.

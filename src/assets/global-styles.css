@@ -91,3 +91,11 @@ img {
   justify-content: space-between;
   align-items: center;
 }
+
+.itemImageWrapper, .itemImageWrapper a, .itemImageWrapper img {
+  border-radius: 15px;
+}
+
+.itemImageWrapper img {
+  border: 2px solid #EC2825;
+}

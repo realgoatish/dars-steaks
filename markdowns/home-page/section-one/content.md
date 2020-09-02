@@ -1,7 +1,16 @@
 ---
+image: ./../../../uploads/ds-cheesesteak-1.jpeg
 ---
-# A Fresh Take On Steaks
-## **Ribeye** Cheesesteaks In Westmont
+# Save Your Toll Money...
 
-Now that we know who you are, I know who I am. I'm not a mistake! It all makes sense! In a comic, you know how you can tell who the arch-villain's going to be? He's the exact opposite of the hero. And most times they're friends, like you and me! I should've known way back when... You know why, David? Because of the kids. They called me Mr Glass.
+We have the real deal Philly Cheesesteaks right here at Dar's Steaks!  
+  
+
+What makes the best cheesesteak?  Some say it's all about the meat.  It must be a good quality cut of beef and seasoned to perfection.  Ribeye is the best!  
+  
+Some would say it's in how the meat is treated once it's on the grill.  Some prefer it left in whole slices, while others prefer a fine chop.  
+  
+Some say it's all about the bread.  It must be fresh and soft on the inside: perfect to sop up all that delicious cheesesteak flavor with the sensational crusty exterior strong enough to hold it all together.
+
+
 
