@@ -3,7 +3,7 @@
     article(class="home-page-content flex")
       figure(class="mobile-image-wrapper")
         g-image(
-          :src="$page.mobileImage.itemImage"
+          :src="$page.heroImage.image"
         )
       section(class="home-page-text")
         section(class="section-one-wrapper container flex")
@@ -76,8 +76,8 @@ query {
     )
     content
   }
-  mobileImage: menuContent (path: "/markdowns/menu/steaks/cheesesteak") {
-    itemImage(
+  heroImage: homePage (path: "/markdowns/home-page/hero-image") {
+    image(
       quality: 100
       width: 1000
       height: 560
@@ -114,8 +114,6 @@ section.home-page-text {
 }
 
 section.home-page-text >>> section.container {
-  /* width: 95%; */
-  /* width: 100%; */
   max-width: none;
   padding-left: 0;
   padding-right: 0;
@@ -134,10 +132,6 @@ section.home-page-text >>> section.container {
 .itemImageWrapper {
   max-width: 80%;
 }
-/* Padding between text sections */
-/* section.home-page-text >>> section + section {
-  padding-top: 3rem;
-} */
 
 /* Padding between <h1>, <h2>, <p> within each text section */
 section.home-page-text >>> section * + * {
@@ -191,7 +185,6 @@ section.home-page-text >>> section * + * {
 }
 
 .section-three >>> h1 {
-  /* color: #ff6100; */
   text-shadow: 1px 1px #566272;
 }
 
@@ -231,9 +224,9 @@ article.home-page-content {
   }
 }
 
-@media (min-width: 1200px) {
+/* @media (min-width: 1200px) {
 
-}
+} */
 
 
 </style>
