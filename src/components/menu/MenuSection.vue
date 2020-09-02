@@ -185,12 +185,12 @@ export default {
   font-size: 1.2rem;
 }
 
-.flex a:hover {
+.menuSections a:hover {
   background-color: #f9c3c0;
 }
 
 .highlighted {
-  background-color: a0ecff;
+  background-color: #f9c3c0;
 }
 
 @media (min-width: 960px) {
