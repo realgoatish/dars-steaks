@@ -13,6 +13,6 @@ We also have unique cheesesteak styles like The Hot Chester with Hot Cheetos, wh
   
 We make things from scratch whenever possible, including our NYC style zeppoles.  
   
-To top it all off, our staff genuinely cares and you can feel the love and soul that we pour into every bite.  
+To top it all off: our staff genuinely cares, and you can feel the love and soul that we pour into every bite.  
 
 We really have something special in our little kitchen here on Haddon Avenue.  Come try the sandwich everyone's talking about today!
