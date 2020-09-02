@@ -18,16 +18,30 @@
             g-image(
               :src="$page.sectionOne.image"
             )
-        section(class="section-two-wrapper container")
+        section(class="section-two-wrapper container flex")
           section(
             class="section-two"
             v-html="$page.sectionTwo.content"
           )
-        section(class="section-three-wrapper container")
+          figure(
+            v-if="$page.sectionTwo.image"
+            class="itemImageWrapper"
+          )
+            g-image(
+              :src="$page.sectionTwo.image"
+            )
+        section(class="section-three-wrapper container flex")
           section(
             class="section-three"
             v-html="$page.sectionThree.content"
           )
+          figure(
+            v-if="$page.sectionThree.image"
+            class="itemImageWrapper"
+          )
+            g-image(
+              :src="$page.sectionThree.image"
+            )
 
 
 </template>
@@ -85,14 +99,6 @@ export default {
 }
 </script>
 
-<style>
-
-p {
-  font-weight:600;
-}
-
-</style>
-
 <style scoped>
 
 /* Style contexts */
@@ -100,8 +106,11 @@ p {
 section.home-page-text {
   width: 100%;
   max-width: none;
-  /* background-image: linear-gradient(#1F85B7, #EC2825, #004BAD); */
   background: #000;
+}
+
+.home-page-text >>> p {
+  font-weight:600;
 }
 
 section.home-page-text >>> section.container {
@@ -123,7 +132,7 @@ section.home-page-text >>> section.container {
 }
 
 .itemImageWrapper {
-  width: 90%;
+  max-width: 80%;
 }
 /* Padding between text sections */
 /* section.home-page-text >>> section + section {
@@ -203,6 +212,23 @@ figure.mobile-image-wrapper >>> img {
 article.home-page-content {
   max-width: none;
   flex-flow: column nowrap;
+}
+
+@media (min-width: 760px) {
+  .section-one-wrapper, .section-two-wrapper, .section-three-wrapper {
+    flex-flow: row nowrap;
+  }
+
+  .section-one, .section-two, .section-three, .itemImageWrapper {
+    margin: 0 auto;
+    max-width: 60ch;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  .home-page-text >>> p {
+    font-weight:400;
+  }
 }
 
 @media (min-width: 1200px) {
