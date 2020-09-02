@@ -6,11 +6,18 @@
           :src="$page.mobileImage.itemImage"
         )
       section(class="home-page-text")
-        section(class="section-one-wrapper container")
+        section(class="section-one-wrapper container flex")
           section(
             class="section-one"
             v-html="$page.sectionOne.content"
           )
+          figure(
+            v-if="$page.sectionOne.image"
+            class="itemImageWrapper"
+          )
+            g-image(
+              :src="$page.sectionOne.image"
+            )
         section(class="section-two-wrapper container")
           section(
             class="section-two"
@@ -29,12 +36,30 @@
 
 query {
   sectionOne: homePage (path: "/markdowns/home-page/section-one/content") {
+    image(
+      width: 500
+      height: 500
+      quality: 90
+      fit: outside
+    )
     content
   }
   sectionTwo: homePage (path: "/markdowns/home-page/section-two/content") {
+    image(
+      width: 500
+      height: 500
+      quality: 90
+      fit: outside
+    )
     content
   }
   sectionThree: homePage (path: "/markdowns/home-page/section-three/content") {
+    image(
+      width: 500
+      height: 500
+      quality: 90
+      fit: outside
+    )
     content
   }
   mobileImage: menuContent (path: "/markdowns/menu/steaks/cheesesteak") {
@@ -75,7 +100,8 @@ p {
 section.home-page-text {
   width: 100%;
   max-width: none;
-  background-image: linear-gradient(#1F85B7, #EC2825, #004BAD);
+  /* background-image: linear-gradient(#1F85B7, #EC2825, #004BAD); */
+  background: #000;
 }
 
 section.home-page-text >>> section.container {
@@ -95,6 +121,10 @@ section.home-page-text >>> section.container {
   width: 95%;
   margin: 0 auto;
 }
+
+.itemImageWrapper {
+  width: 90%;
+}
 /* Padding between text sections */
 /* section.home-page-text >>> section + section {
   padding-top: 3rem;
@@ -103,6 +133,10 @@ section.home-page-text >>> section.container {
 /* Padding between <h1>, <h2>, <p> within each text section */
 section.home-page-text >>> section * + * {
   padding-top: 0.8rem;
+}
+
+.section-one-wrapper, .section-two-wrapper, .section-three-wrapper {
+  flex-flow: column nowrap;
 }
 
 .section-one-wrapper {
