@@ -183,6 +183,7 @@ export default {
         { property: 'og:description', content: `${this.$page.info.menu.description}` },
         { property: 'og:url', content: `${this.$page.info.siteUrl}${this.$route.fullPath}` },
         { property: 'og:image', content: `${this.$page.info.siteUrl}${this.$page.steaksContent.edges[this.$page.steaksContent.edges.findIndex(x => x.node.itemName === 'Hot Chester')].node.itemImage.src}` },
+        { property: 'og:image:alt', content: `The Hot Chester Cheesesteak` },
         { property: 'og:image:width', content: '1200' },
         { property: 'og:image:height', content: '630' },
         { name: 'description', content: `${this.$page.info.menu.description}` }
