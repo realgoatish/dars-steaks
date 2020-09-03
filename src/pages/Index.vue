@@ -82,7 +82,14 @@ query {
       width: 1000
       height: 560
     )
-  } 
+  }
+  info: metadata {
+    home {
+      title
+      description
+    }
+    siteUrl
+  }
 }
 
 </page-query>
