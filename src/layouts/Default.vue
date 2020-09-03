@@ -31,6 +31,9 @@
           //- nav(class="nav")
           //-   g-link(class="nav__link" to="/") Home
           //-   g-link(class="nav__link" to="/menu/") Menu
+    section(class="coming-soon-banner")
+      h1 Coming Soon!
+      p #[strong GRAND OPENING] September 9th
     slot
 </template>
 
@@ -195,13 +198,8 @@ section.header {
   background-color: #ccc;
 }
 
-
-
-/* .nav__link {
-  margin-left: 20px;
-} */
-
-@media (min-width: 960px) {
-
+.coming-soon-banner {
+  text-align: center;
 }
+
 </style>
