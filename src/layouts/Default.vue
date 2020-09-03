@@ -28,13 +28,29 @@
               li(class="dropdown-menu__item")
                 g-link(class="dropdown-menu__link" to="/menu/") Menu
 
-          //- nav(class="nav")
-          //-   g-link(class="nav__link" to="/") Home
-          //-   g-link(class="nav__link" to="/menu/") Menu
+        nav(
+          class="desktop-nav"
+        )
+          ul(class="desktop-nav-ul")
+            li
+              g-link(class="desktop-nav-link" to="/") Home
+            li
+              g-link(class="desktop-nav-link" to="/menu/") Menu
+
     section(class="coming-soon-banner")
       h1 Coming Soon!
       p #[strong GRAND OPENING] September 9th
     slot
+    footer(class="footer flex")
+      section(class="footer-social social-icons flex")
+        a(:href="$static.header.facebookLink")
+          g-image(:alt="$static.header.facebookAltText" :src="$static.header.facebookIcon")
+        a(:href="$static.header.instagramLink")
+          g-image(:alt="$static.header.instagramAltText" :src="$static.header.instagramIcon")
+        a(:href="$static.header.emailLink")
+          g-image(:alt="$static.header.emailAltText" :src="$static.header.emailIcon")
+      section(class="footer-copy")
+        p &copy;2020 - Dar's Steaks
 </template>
 
 <static-query>
@@ -74,7 +90,8 @@ export default {
     return {
       dropDowns: {
         ranking: { open: false}  
-      }
+      },
+      isActive: null
     }
   },
   mounted() {
@@ -94,6 +111,10 @@ export default {
       for (const dd in this.dropDowns) {
         this.dropDowns[dd].open = false;    
       }
+    },
+    activePage(item) {
+      console.log(item.target.childNodes[0].data)
+      this.isActive = item.target.childNodes[0].data
     }
   }
 }
@@ -103,9 +124,7 @@ export default {
 
 <style scoped>
 
-/* .layout {
 
-} */
 /*
 color: #004BAD <== Menu Section Titles Blue
 color: #1F85B7 <== Dar's Steaks Logo design Lighter blue
@@ -113,8 +132,22 @@ color: #542825 <== Menu Item Descriptions burnt red
 color: #EC2825 <== Dar's Steaks Logo letters red
 */
 
+.desktop-nav {
+  display: none;
+}
+
+.footer.flex {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  flex-flow: column nowrap
+}
+
+.footer-social, .footer-copy {
+  padding-bottom: 1rem;
+}
+
 .header a {
-  color: black;
+  color: #fff;
   text-decoration: none;
 }
 
@@ -125,7 +158,7 @@ color: #EC2825 <== Dar's Steaks Logo letters red
 
 .social-icons {
   padding-top: 0.8rem;
-  width: 115px; /* Want a fixed width here because relative width makes it expand and contract awkwardly in the layout */
+  width: 130px; /* Want a fixed width here because relative width makes it expand and contract awkwardly in the layout */
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
@@ -198,8 +231,55 @@ section.header {
   background-color: #ccc;
 }
 
-.coming-soon-banner {
+.coming-soon-banner, .footer {
   text-align: center;
 }
+
+.footer {
+  color: #fff;
+  background: #000;
+}
+
+.footer-copy {
+  font-size: 80%;
+}
+
+@media (min-width: 1200px) {
+  .menu__item--dropdown {
+    display: none;
+  }
+
+  /* This width is pretty tight for any more links, but gives us a decent symmetry for now.  Make a decision */
+  .desktop-nav {
+    display: block;
+    width: 15rem;
+  }
+
+  .desktop-nav-ul {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  /* This width won't work when you add more links.  */
+  .desktop-nav-ul >>> li {
+    width: 40%;
+  }
+
+  .desktop-nav-ul >>> .desktop-nav-link {
+    display: block;
+    border: 2px solid #EC2825;
+    background-color: inherit;
+    transition: background-color .3s cubic-bezier(0.25, 0.8, 0.5, 1);
+    border-radius: 2px;
+    padding: 0.4rem;
+    text-align: center;
+  }
+
+  .desktop-nav-link:hover {
+    background-color: #f9c3c0;
+  }
+
+}
+
 
 </style>
