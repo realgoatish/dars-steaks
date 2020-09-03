@@ -28,9 +28,9 @@
         :sectionMenuItems="$page.friesContent.edges"
       )
       MenuSection(
-        v-show="currentSection === $page.gyroHeaders.title"
-        :sectionPrimaryTitle="$page.gyroHeaders.title"
-        :sectionMenuItems="$page.gyroContent.edges"
+        v-show="currentSection === $page.sandwichesHeaders.title"
+        :sectionPrimaryTitle="$page.sandwichesHeaders.title"
+        :sectionMenuItems="$page.sandwichesContent.edges"
       )
       MenuSection(
         v-show="currentSection === $page.zeppoleHeaders.title"
@@ -144,6 +144,12 @@ query {
         itemName
         price
         description
+        itemImage(
+          width: 500
+          height: 500
+          quality: 90
+          fit: outside
+        )
       }
     }
   }
@@ -191,9 +197,11 @@ export default {
   },
   created() {
     this.menuSectionTitles.push(this.$page.steaksHeaders.title)
-    this.menuSectionTitles.push(this.$page.extrasHeaders.title)
+    this.menuSectionTitles.push(this.$page.sandwichesHeaders.title)
     this.menuSectionTitles.push(this.$page.friesHeaders.title)
-    this.menuSectionTitles.push(this.$page.gyroHeaders.title)
+    this.menuSectionTitles.push(this.$page.zeppoleHeaders.title)
+    this.menuSectionTitles.push(this.$page.extrasHeaders.title)
+
   },
   mounted() {
     console.log(this.$route)
