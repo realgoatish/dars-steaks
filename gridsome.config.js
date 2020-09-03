@@ -25,6 +25,12 @@ module.exports = {
   },
   plugins: [
     {
+      use: '@gridsome/plugin-sitemap',
+      options: {
+        include: ['/', '/menu/', '/assets/static/**']
+      }
+    },
+    {
       use: '@gridsome/source-filesystem',
       options: {
         path: 'markdowns/menu/**/*.md',
