@@ -93,7 +93,12 @@ query {
 export default {
   metaInfo() {
     return {
-      title: 'Hello, world!'
+      title: `${this.$page.info.home.title}`,
+      link: [
+        {
+          rel: 'canonical', href: `${this.$page.info.siteUrl}${this.$route.fullPath}`
+        }
+      ]
     }
   }
 }
