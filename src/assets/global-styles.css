@@ -65,6 +65,25 @@ footer {
   max-width: none;
 }
 
+/* BEGIN CODE BLOCK FOR PINNING FOOTER TO BOTTOM OF PAGE */
+html, body, #app, .layout {
+	height: 100%;
+}
+
+.layout {
+	display: flex;
+	flex-direction: column;
+}
+
+.menu-page-content, .home-page-content {
+	flex: 1 0 auto;
+}
+
+.footer {
+	flex-shrink: 0;
+}
+/* END CODE BLOCK FOR PINNING FOOTER TO BOTTOM OF PAGE */
+
 figure {
 	/* Safari hack to prevent bottom gap between figure and image */
 	line-height: 0;

@@ -1,6 +1,6 @@
 <template lang="pug">
   Layout
-    main
+    main(class="menu-page-content")
       MenuSection(
         menuNav=true
         @show-section="showSelectedSection"
