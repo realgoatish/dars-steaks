@@ -10,5 +10,5 @@ facebookIcon: "./../../../uploads/icon-facebook.svg"
 facebookLink: https://www.facebook.com/darssteaks
 facebookAltText: Facebook Icon
 emailIcon: "./../../../uploads/icon-email.svg"
-emailLink: "#"
+emailLink: "mailto: info@darssteaks.com"
 emailAltText: Email Icon
