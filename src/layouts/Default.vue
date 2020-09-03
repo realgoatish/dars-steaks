@@ -111,10 +111,6 @@ export default {
       for (const dd in this.dropDowns) {
         this.dropDowns[dd].open = false;    
       }
-    },
-    activePage(item) {
-      console.log(item.target.childNodes[0].data)
-      this.isActive = item.target.childNodes[0].data
     }
   }
 }
@@ -149,6 +145,10 @@ color: #EC2825 <== Dar's Steaks Logo letters red
 .header a {
   color: #fff;
   text-decoration: none;
+}
+
+.dropdown-menu a {
+  color: #000;
 }
 
 .left {
