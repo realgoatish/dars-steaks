@@ -6,7 +6,6 @@ arrayItems:
   - jalapeño
   - lettuce and tomato
   - pickles
-  - pico
   - ranch
   - marinara
 price: $.50

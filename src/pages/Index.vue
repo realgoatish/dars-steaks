@@ -97,6 +97,7 @@ query {
       description
     }
     siteUrl
+    siteName
   }
 }
 
@@ -108,7 +109,7 @@ query {
 export default {
   metaInfo() {
     return {
-      title: `${this.$page.info.home.title}`,
+      title: `${this.$page.info.home.title} | ${this.$page.info.siteName}`,
       link: [
         {
           rel: 'canonical', href: `${this.$page.info.siteUrl}${this.$route.fullPath}`
@@ -123,7 +124,7 @@ export default {
         { property: 'og:image:alt', content: `${this.$page.heroImage.imageAltText}` },
         { property: 'og:image:width', content: '1200' },
         { property: 'og:image:height', content: '630' },
-        { name: 'description', content: `${this.$page.info.home.description}` }
+        { key: 'description', name: 'description', content: `${this.$page.info.home.description}` }
       ]
     }
   }

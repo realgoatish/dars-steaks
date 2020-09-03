@@ -159,6 +159,7 @@ query {
       description
     }
     siteUrl
+    siteName
   }
 }
 
@@ -171,7 +172,7 @@ import MenuSection from '~/components/menu/MenuSection.vue'
 export default {
   metaInfo() {
     return {
-      title: `${this.$page.info.menu.title}`,
+      title: `${this.$page.info.menu.title} | ${this.$page.info.siteName}`,
       link: [
         {
           rel: 'canonical', href: `${this.$page.info.siteUrl}${this.$route.fullPath}`
@@ -186,7 +187,7 @@ export default {
         { property: 'og:image:alt', content: `The Hot Chester Cheesesteak` },
         { property: 'og:image:width', content: '1200' },
         { property: 'og:image:height', content: '630' },
-        { name: 'description', content: `${this.$page.info.menu.description}` }
+        { key: 'description', name: 'description', content: `${this.$page.info.menu.description}` }
       ]
     }
   },

@@ -6,7 +6,7 @@
 
 module.exports = {
   siteName: `Dar's Steaks`,
-  siteDescription: `Serving the World's Best Cheesesteaks in Westmont, NJ`,
+  // siteDescription: `Serving the World's Best Cheesesteaks in Westmont, NJ`,
   titleTemplate: `%s | Dar's Steaks`,
   siteUrl: 'https://www.darssteaks.com',
   permalinks: {
@@ -16,7 +16,7 @@ module.exports = {
   metadata: {
     menu: {
       title: `Menu`,
-      description: `Cheesesteaks, sandwiches, fries, and zeppoles in Westmont, NJ`
+      description: `Dar's Steaks Menu - Cheesesteaks, sandwiches, fries, and zeppoles in Westmont, NJ`
     },
     home: {
       title: `Home`,
@@ -24,6 +24,12 @@ module.exports = {
     }
   },
   plugins: [
+    {
+      use: '@gridsome/plugin-sitemap',
+      options: {
+        include: ['/', '/menu/', '/assets/static/**']
+      }
+    },
     {
       use: '@gridsome/source-filesystem',
       options: {
