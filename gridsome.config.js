@@ -16,7 +16,11 @@ module.exports = {
   metadata: {
     menu: {
       title: `Menu`,
-      description: ``
+      description: `Cheesesteaks, sandwiches, fries, and zeppoles in Westmont, NJ`
+    },
+    home: {
+      title: `Home`,
+      description: `Serving the world's best cheesesteak in Westmont, NJ`
     }
   },
   plugins: [

@@ -28,9 +28,14 @@
         :sectionMenuItems="$page.friesContent.edges"
       )
       MenuSection(
-        v-show="currentSection === $page.gyroHeaders.title"
-        :sectionPrimaryTitle="$page.gyroHeaders.title"
-        :sectionMenuItems="$page.gyroContent.edges"
+        v-show="currentSection === $page.sandwichesHeaders.title"
+        :sectionPrimaryTitle="$page.sandwichesHeaders.title"
+        :sectionMenuItems="$page.sandwichesContent.edges"
+      )
+      MenuSection(
+        v-show="currentSection === $page.zeppoleHeaders.title"
+        :sectionPrimaryTitle="$page.zeppoleHeaders.title"
+        :sectionMenuItems="$page.zeppoleContent.edges"
       )
 </template>
 
@@ -104,14 +109,14 @@ query {
       }
     }
   }
-  gyroHeaders: menuContent (path: "/markdowns/menu/gyro/headers") {
+  sandwichesHeaders: menuContent (path: "/markdowns/menu/sandwiches/headers") {
     title
   }
-  gyroContent: allMenuContent(
+  sandwichesContent: allMenuContent(
     filter: {
       fileInfo: {
         directory: {
-          eq: "markdowns/menu/gyro"
+          eq: "markdowns/menu/sandwiches"
         }
       }
     }, sortBy: "number", skip: 1, order: ASC) {
@@ -120,6 +125,31 @@ query {
         itemName
         price
         description
+      }
+    }
+  }
+  zeppoleHeaders: menuContent (path: "/markdowns/menu/zeppole/headers") {
+    title
+  }
+  zeppoleContent: allMenuContent(
+    filter: {
+      fileInfo: {
+        directory: {
+          eq: "markdowns/menu/zeppole"
+        }
+      }
+    }, sortBy: "number", skip: 1, order: ASC) {
+    edges {
+      node {
+        itemName
+        price
+        description
+        itemImage(
+          width: 500
+          height: 500
+          quality: 90
+          fit: outside
+        )
       }
     }
   }
@@ -162,18 +192,16 @@ export default {
   data() {
     return {
       menuSectionTitles: [],
-      currentSection: null,
-      // reversedSteaksArray: () => {
-        
-      //   this.$page.steaksContent.edges.reverse()
-      // }
+      currentSection: null
     }
   },
   created() {
     this.menuSectionTitles.push(this.$page.steaksHeaders.title)
-    this.menuSectionTitles.push(this.$page.extrasHeaders.title)
+    this.menuSectionTitles.push(this.$page.sandwichesHeaders.title)
     this.menuSectionTitles.push(this.$page.friesHeaders.title)
-    this.menuSectionTitles.push(this.$page.gyroHeaders.title)
+    this.menuSectionTitles.push(this.$page.zeppoleHeaders.title)
+    this.menuSectionTitles.push(this.$page.extrasHeaders.title)
+
   },
   mounted() {
     console.log(this.$route)

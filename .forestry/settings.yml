@@ -46,7 +46,7 @@ sections:
   create: documents
   match: "*.md"
 - type: directory
-  path: markdowns/menu/gyro
+  path: markdowns/menu/sandwiches
   label: Gyro
   create: documents
   match: "*.md"

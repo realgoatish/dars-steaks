@@ -1,5 +1,5 @@
 ---
-number: 9
+number: 6
 itemName: The Call
-price: $11.75
+price: $12
 description: bacon, ranch, american cheese

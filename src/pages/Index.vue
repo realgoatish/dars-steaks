@@ -82,7 +82,14 @@ query {
       width: 1000
       height: 560
     )
-  } 
+  }
+  info: metadata {
+    home {
+      title
+      description
+    }
+    siteUrl
+  }
 }
 
 </page-query>
@@ -93,7 +100,12 @@ query {
 export default {
   metaInfo() {
     return {
-      title: 'Hello, world!'
+      title: `${this.$page.info.home.title}`,
+      link: [
+        {
+          rel: 'canonical', href: `${this.$page.info.siteUrl}${this.$route.fullPath}`
+        }
+      ]
     }
   }
 }
