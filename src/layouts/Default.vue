@@ -151,6 +151,10 @@ color: #EC2825 <== Dar's Steaks Logo letters red
   text-decoration: none;
 }
 
+.dropdown-menu a {
+  color: #000;
+}
+
 .left {
   width: 15rem;
   flex-flow: column nowrap;
