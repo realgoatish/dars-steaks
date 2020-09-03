@@ -111,10 +111,6 @@ export default {
       for (const dd in this.dropDowns) {
         this.dropDowns[dd].open = false;    
       }
-    },
-    activePage(item) {
-      console.log(item.target.childNodes[0].data)
-      this.isActive = item.target.childNodes[0].data
     }
   }
 }
