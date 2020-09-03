@@ -1,5 +1,5 @@
 ---
-label: Menu Item - Gyro
+label: Menu Item - Zeppole
 hide_body: false
 fields:
 - type: number
@@ -14,3 +14,6 @@ fields:
 - type: textarea
   name: description
   label: Description
+- type: file
+  name: itemImage
+  label: Item Image

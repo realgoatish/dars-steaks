@@ -1,5 +1,5 @@
 ---
-number: 10
+number: 7
 itemName: Steak & Egg
-price: $11.75
+price: $12
 description: choice of protein, egg, cheese

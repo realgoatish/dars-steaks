@@ -1,6 +1,6 @@
 ---
-number: 11
+number: 8
 itemName: Hot Chester
-price: $10.50
+price: $10.75
 description: hot Cheetos, banana peppers, whiz
 itemImage: ./../../../uploads/ds-hot-chester.jpeg

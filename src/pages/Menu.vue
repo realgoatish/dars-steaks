@@ -32,6 +32,11 @@
         :sectionPrimaryTitle="$page.gyroHeaders.title"
         :sectionMenuItems="$page.gyroContent.edges"
       )
+      MenuSection(
+        v-show="currentSection === $page.zeppoleHeaders.title"
+        :sectionPrimaryTitle="$page.zeppoleHeaders.title"
+        :sectionMenuItems="$page.zeppoleContent.edges"
+      )
 </template>
 
 <page-query>
@@ -104,14 +109,33 @@ query {
       }
     }
   }
-  gyroHeaders: menuContent (path: "/markdowns/menu/gyro/headers") {
+  sandwichesHeaders: menuContent (path: "/markdowns/menu/sandwiches/headers") {
     title
   }
-  gyroContent: allMenuContent(
+  sandwichesContent: allMenuContent(
     filter: {
       fileInfo: {
         directory: {
-          eq: "markdowns/menu/gyro"
+          eq: "markdowns/menu/sandwiches"
+        }
+      }
+    }, sortBy: "number", skip: 1, order: ASC) {
+    edges {
+      node {
+        itemName
+        price
+        description
+      }
+    }
+  }
+  zeppoleHeaders: menuContent (path: "/markdowns/menu/zeppole/headers") {
+    title
+  }
+  zeppoleContent: allMenuContent(
+    filter: {
+      fileInfo: {
+        directory: {
+          eq: "markdowns/menu/zeppole"
         }
       }
     }, sortBy: "number", skip: 1, order: ASC) {
