@@ -4,6 +4,7 @@
       figure(class="mobile-image-wrapper")
         g-image(
           :src="$page.heroImage.image"
+          :alt="$page.heroImage.imageAltText"
         )
       section(class="home-page-text")
         section(class="section-one-wrapper container flex")
@@ -17,6 +18,7 @@
           )
             g-image(
               :src="$page.sectionOne.image"
+              :alt="$page.sectionOne.imageAltText"
             )
         section(class="section-two-wrapper container flex")
           section(
@@ -29,6 +31,7 @@
           )
             g-image(
               :src="$page.sectionTwo.image"
+              :alt="$page.sectionTwo.imageAltText"
             )
         section(class="section-three-wrapper container flex")
           section(
@@ -41,6 +44,7 @@
           )
             g-image(
               :src="$page.sectionThree.image"
+              :alt="$page.sectionThree.imageAltText"
             )
 
 
@@ -56,6 +60,7 @@ query {
       quality: 90
       fit: outside
     )
+    imageAltText
     content
   }
   sectionTwo: homePage (path: "/markdowns/home-page/section-two/content") {
@@ -65,6 +70,7 @@ query {
       quality: 90
       fit: outside
     )
+    imageAltText
     content
   }
   sectionThree: homePage (path: "/markdowns/home-page/section-three/content") {
@@ -74,6 +80,7 @@ query {
       quality: 90
       fit: outside
     )
+    imageAltText
     content
   }
   heroImage: homePage (path: "/markdowns/home-page/hero-image") {
@@ -82,6 +89,7 @@ query {
       width: 1000
       height: 560
     )
+    imageAltText
   }
   info: metadata {
     home {
@@ -105,6 +113,17 @@ export default {
         {
           rel: 'canonical', href: `${this.$page.info.siteUrl}${this.$route.fullPath}`
         }
+      ],
+      meta: [
+        { property: 'og:title', content: `${this.$page.info.home.title}` },
+        { property: 'og:type', content: 'website' },
+        { property: 'og:description', content: `${this.$page.info.home.description}` },
+        { property: 'og:url', content: `${this.$page.info.siteUrl}${this.$route.fullPath}` },
+        { property: 'og:image', content: `${this.$page.info.siteUrl}${this.$page.heroImage.image.src}` },
+        { property: 'og:image:alt', content: `${this.$page.heroImage.imageAltText}` },
+        { property: 'og:image:width', content: '1200' },
+        { property: 'og:image:height', content: '630' },
+        { name: 'description', content: `${this.$page.info.home.description}` }
       ]
     }
   }
