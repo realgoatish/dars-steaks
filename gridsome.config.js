@@ -24,12 +24,12 @@ module.exports = {
     }
   },
   plugins: [
-    {
-      use: '@gridsome/plugin-sitemap',
-      options: {
-        include: ['/', '/menu/', '/uploads/**']
-      }
-    },
+    // {
+    //   use: '@gridsome/plugin-sitemap',
+    //   options: {
+    //     include: ['/', '/menu/', '/uploads/**']
+    //   }
+    // },
     {
       use: '@gridsome/source-filesystem',
       options: {
