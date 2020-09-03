@@ -27,7 +27,7 @@ module.exports = {
     {
       use: '@gridsome/plugin-sitemap',
       options: {
-        include: ['/', '/menu/', '/assets/static/**']
+        include: ['/', '/menu/', '/assets/static/uploads/**']
       }
     },
     {
