@@ -162,11 +162,7 @@ export default {
   data() {
     return {
       menuSectionTitles: [],
-      currentSection: null,
-      // reversedSteaksArray: () => {
-        
-      //   this.$page.steaksContent.edges.reverse()
-      // }
+      currentSection: null
     }
   },
   created() {
