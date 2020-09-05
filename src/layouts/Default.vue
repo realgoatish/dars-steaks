@@ -39,7 +39,8 @@
 
     section(class="coming-soon-banner")
       h1 Coming Soon!
-      p #[strong GRAND OPENING] September 9th
+      p #[strong GRAND OPENING] in mid-September.  
+      p Date to be announced soon!
     slot
     footer(class="footer flex")
       section(class="footer-social social-icons flex")
