@@ -12,3 +12,6 @@ facebookAltText: Facebook Icon
 emailIcon: "./../../../uploads/icon-email.svg"
 emailLink: "mailto: info@darssteaks.com"
 emailAltText: Email Icon
+phoneIcon: "./../../../uploads/icon-phone.svg"
+phoneLink: "tel:+1-856-885-2460"
+phoneAltText: Phone Icon
