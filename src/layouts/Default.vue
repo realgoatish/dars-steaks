@@ -11,6 +11,8 @@
               g-image(:alt="$static.header.instagramAltText" :src="$static.header.instagramIcon")
             a(:href="$static.header.emailLink")
               g-image(:alt="$static.header.emailAltText" :src="$static.header.emailIcon")
+            a(:href="$static.header.phoneLink")
+              g-image(:alt="$static.header.phoneAltText" :src="$static.header.phoneIcon")
         nav(
           class="menu__item menu__item--dropdown"
           v-on:click="toggle('ranking')"
@@ -81,6 +83,9 @@ query {
     emailIcon
     emailLink
     emailAltText
+    phoneIcon
+    phoneLink
+    phoneAltText
   }
 }
 </static-query>
@@ -159,7 +164,7 @@ color: #EC2825 <== Dar's Steaks Logo letters red
 
 .social-icons {
   padding-top: 0.8rem;
-  width: 130px; /* Want a fixed width here because relative width makes it expand and contract awkwardly in the layout */
+  width: 180px; /* Want a fixed width here because relative width makes it expand and contract awkwardly in the layout */
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
