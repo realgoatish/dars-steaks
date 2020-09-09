@@ -134,6 +134,10 @@ export default {
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
+/* No bottom border for the last item in a displayed menu section */
+.menuItem:last-child {
+  border-bottom: none;
+}
 
 .itemImageWrapper {
   max-width: 30%;
