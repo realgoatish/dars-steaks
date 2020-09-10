@@ -15,8 +15,8 @@
               g-image(:alt="$static.header.instagramAltText" :src="$static.header.instagramIcon")
             a(:href="$static.header.emailLink")
               g-image(:alt="$static.header.emailAltText" :src="$static.header.emailIcon")
-          section(class="contact-info flex")
-            p Use the above icons or #[g-link(href="/contact") click here] for hours and complete contact info
+          section(class="header-contact-info flex")
+            p Use the above icons or #[a(@click.stop href="#footer") click here] for hours and complete contact info
             
         nav(
           class="menu__item menu__item--dropdown"
@@ -45,7 +45,9 @@
               g-link(class="desktop-nav-link" to="/menu/") Menu
     
     slot
-    footer(class="footer flex")
+    footer(id="footer" class="flex")
+      section(class="footer-contact-info")
+
       section(class="footer-social social-icons flex")
         a(:href="$static.header.phoneLink" rel="nofollow")
           g-image(:alt="$static.header.phoneAltText" :src="$static.header.phoneIcon")
@@ -146,7 +148,7 @@ color: #EC2825 <== Dar's Steaks Logo letters red
   display: none;
 }
 
-.footer.flex {
+#footer.flex {
   padding-top: 2rem;
   padding-bottom: 2rem;
   flex-flow: column nowrap
@@ -191,15 +193,18 @@ color: #EC2825 <== Dar's Steaks Logo letters red
   height: 100%;
 }
 
-.contact-info {
+.header-contact-info, .footer-contact-info {
   padding-top: 0.8rem;
-  font-size: 85%;
   text-align: center;
   color: white;
   flex-flow: column nowrap;
 }
 
-.contact-info >>> a {
+.header-contact-info {
+  font-size: 85%;
+}
+
+.header-contact-info >>> a {
   text-decoration: underline;
 }
 
@@ -265,7 +270,7 @@ section.header {
   text-align: center;
 }
 
-.footer {
+#footer {
   color: #fff;
   background: #000;
 }
