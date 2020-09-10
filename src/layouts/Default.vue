@@ -47,7 +47,7 @@
     slot
     footer(id="footer" class="flex")
       section(class="footer-contact-info")
-
+        p Sem integer vitae justo eget magna. Sagittis purus sit amet volutpat consequat mauris nunc. Sit amet consectetur adipiscing elit ut aliquam. Sit amet venenatis urna cursus eget. Dictum varius duis at consectetur lorem donec massa. Leo a diam sollicitudin tempor id eu nisl. Ipsum dolor sit amet consectetur adipiscing elit. Volutpat sed cras ornare arcu dui vivamus arcu felis. Vel eros donec ac odio tempor orci dapibus ultrices in. Id ornare arcu odio ut sem nulla.  Sem integer vitae justo eget magna. Sagittis purus sit amet volutpat consequat mauris nunc. Sit amet consectetur adipiscing elit ut aliquam. Sit amet venenatis urna cursus eget. Dictum varius duis at consectetur lorem donec massa. Leo a diam sollicitudin tempor id eu nisl. Ipsum dolor sit amet consectetur adipiscing elit. Volutpat sed cras ornare arcu dui vivamus arcu felis. Vel eros donec ac odio tempor orci dapibus ultrices in. Id ornare arcu odio ut sem nulla.
       section(class="footer-social social-icons flex")
         a(:href="$static.header.phoneLink" rel="nofollow")
           g-image(:alt="$static.header.phoneAltText" :src="$static.header.phoneIcon")
