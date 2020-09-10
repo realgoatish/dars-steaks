@@ -2,17 +2,22 @@
   div(class="layout")
     section(class="container header")
       header(class="flex")
-        section(class="left flex")
+        section(class="column flex")
           g-image(:alt="$static.header.logoAltText" :src="$static.header.logo")
           section(class="social-icons flex")
+            a(:href="$static.header.phoneLink")
+              g-image(:alt="$static.header.phoneAltText" :src="$static.header.phoneIcon")
+            a(:href="$static.header.mapLink")
+              g-image(:alt="$static.header.mapAltText" :src="$static.header.mapIcon" target="_blank")
             a(:href="$static.header.facebookLink")
               g-image(:alt="$static.header.facebookAltText" :src="$static.header.facebookIcon")
             a(:href="$static.header.instagramLink")
               g-image(:alt="$static.header.instagramAltText" :src="$static.header.instagramIcon")
             a(:href="$static.header.emailLink")
               g-image(:alt="$static.header.emailAltText" :src="$static.header.emailIcon")
-            a(:href="$static.header.phoneLink")
-              g-image(:alt="$static.header.phoneAltText" :src="$static.header.phoneIcon")
+          section(class="contact-info flex")
+            p Use the above icons or #[g-link(href="/contact") click here] for hours and complete contact info
+            
         nav(
           class="menu__item menu__item--dropdown"
           v-on:click="toggle('ranking')"
@@ -38,19 +43,19 @@
               g-link(class="desktop-nav-link" to="/") Home
             li
               g-link(class="desktop-nav-link" to="/menu/") Menu
-
-    section(class="coming-soon-banner")
-      h1 Coming Soon!
-      p #[strong GRAND OPENING] in mid-September.  
-      p Date to be announced soon!
+    
     slot
     footer(class="footer flex")
       section(class="footer-social social-icons flex")
+        a(:href="$static.header.phoneLink" rel="nofollow")
+          g-image(:alt="$static.header.phoneAltText" :src="$static.header.phoneIcon")
+        a(:href="$static.header.mapLink" target="_blank" rel="nofollow noopener")
+          g-image(:alt="$static.header.mapAltText" :src="$static.header.mapIcon")
         a(:href="$static.header.facebookLink")
           g-image(:alt="$static.header.facebookAltText" :src="$static.header.facebookIcon")
         a(:href="$static.header.instagramLink")
           g-image(:alt="$static.header.instagramAltText" :src="$static.header.instagramIcon")
-        a(:href="$static.header.emailLink")
+        a(:href="$static.header.emailLink" rel="nofollow")
           g-image(:alt="$static.header.emailAltText" :src="$static.header.emailIcon")
       section(class="footer-copy")
         p &copy;2020 - Dar's Steaks
@@ -86,6 +91,9 @@ query {
     phoneIcon
     phoneLink
     phoneAltText
+    mapIcon
+    mapLink
+    mapAltText
   }
 }
 </static-query>
@@ -157,17 +165,21 @@ color: #EC2825 <== Dar's Steaks Logo letters red
   color: #000;
 }
 
-.left {
+.column {
   width: 15rem;
   flex-flow: column nowrap;
 }
 
 .social-icons {
   padding-top: 0.8rem;
-  width: 180px; /* Want a fixed width here because relative width makes it expand and contract awkwardly in the layout */
+  /* width: 180px; Want a fixed width here because relative width makes it expand and contract awkwardly in the layout */
   flex-flow: row nowrap;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+}
+
+.social-icons >>> a + a {
+  margin-left: 1rem;
 }
 
 .social-icons a {
@@ -177,6 +189,18 @@ color: #EC2825 <== Dar's Steaks Logo letters red
 .social-icons img {
   display: block;
   height: 100%;
+}
+
+.contact-info {
+  padding-top: 0.8rem;
+  font-size: 85%;
+  text-align: center;
+  color: white;
+  flex-flow: column nowrap;
+}
+
+.contact-info >>> a {
+  text-decoration: underline;
 }
 
 .hamburger-menu {
