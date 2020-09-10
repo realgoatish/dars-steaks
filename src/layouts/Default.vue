@@ -5,16 +5,53 @@
         section(class="column flex")
           g-image(:alt="$static.header.logoAltText" :src="$static.header.logo")
           section(class="social-icons flex")
-            a(:href="$static.header.phoneLink")
-              g-image(:alt="$static.header.phoneAltText" :src="$static.header.phoneIcon")
-            a(:href="$static.header.mapLink")
-              g-image(:alt="$static.header.mapAltText" :src="$static.header.mapIcon" target="_blank")
-            a(:href="$static.header.facebookLink")
-              g-image(:alt="$static.header.facebookAltText" :src="$static.header.facebookIcon")
-            a(:href="$static.header.instagramLink")
-              g-image(:alt="$static.header.instagramAltText" :src="$static.header.instagramIcon")
-            a(:href="$static.header.emailLink")
-              g-image(:alt="$static.header.emailAltText" :src="$static.header.emailIcon")
+            a(
+              :href="$static.header.phoneLink"
+              aria-label="Call Dar's Steaks (opens your native phone app)" 
+              rel="nofollow"
+            )
+              g-image(
+                :alt="$static.header.phoneAltText" 
+                :src="$static.header.phoneIcon"
+              )
+            a(
+              :href="$static.header.mapLink" 
+              target="_blank" 
+              aria-label="See Dar's Steaks on a map (opens in a new window)" 
+              rel="nofollow"
+            )
+              g-image(
+                :alt="$static.header.mapAltText" 
+                :src="$static.header.mapIcon"
+              )
+            a(
+              :href="$static.header.facebookLink" 
+              target="_blank" 
+              aria-label="Visit the Dar's Steaks Facebook Page (opens in a new window)" 
+              rel="nofollow"
+            )
+              g-image(
+                :alt="$static.header.facebookAltText" 
+                :src="$static.header.facebookIcon"
+              )
+            a(
+              :href="$static.header.instagramLink" 
+              target="_blank" 
+              aria-label="Visit the Dar's Steaks Instagram (opens in a new window)" 
+              rel="nofollow"
+            )
+              g-image(:alt="$static.header.instagramAltText" 
+              :src="$static.header.instagramIcon"
+            )
+            a(
+              :href="$static.header.emailLink" 
+              aria-label="Send Dar's Steaks an email (opens your native mail app)" 
+              rel="nofollow"
+            )
+              g-image(
+                :alt="$static.header.emailAltText" 
+                :src="$static.header.emailIcon"
+              )
           section(class="header-contact-info flex")
             //- p Use the above icons or #[a(@click.stop href="#footer") click here] for hours and complete contact info
             p (856)-885-2460
@@ -33,6 +70,7 @@
               class="hamburger-menu"
               :alt="$static.header.hamburgerMenuAltText"
               :src="$static.header.hamburgerMenu"
+              aria-label="menu"
               )
             ul(class="dropdown-menu")
               li(class="dropdown-menu__item")
@@ -51,19 +89,55 @@
     
     slot
     footer(id="footer" class="flex")
-      section(class="footer-contact-info flex")
-        //- p Sem integer vitae justo eget magna. Sagittis purus sit amet volutpat consequat mauris nunc. Sit amet consectetur adipiscing elit ut aliquam. Sit amet venenatis urna cursus eget. Dictum varius duis at consectetur lorem donec massa. Leo a diam sollicitudin tempor id eu nisl. Ipsum dolor sit amet consectetur adipiscing elit. Volutpat sed cras ornare arcu dui vivamus arcu felis. Vel eros donec ac odio tempor orci dapibus ultrices in. Id ornare arcu odio ut sem nulla.  Sem integer vitae justo eget magna. Sagittis purus sit amet volutpat consequat mauris nunc. Sit amet consectetur adipiscing elit ut aliquam. Sit amet venenatis urna cursus eget. Dictum varius duis at consectetur lorem donec massa. Leo a diam sollicitudin tempor id eu nisl. Ipsum dolor sit amet consectetur adipiscing elit. Volutpat sed cras ornare arcu dui vivamus arcu felis. Vel eros donec ac odio tempor orci dapibus ultrices in. Id ornare arcu odio ut sem nulla.
+      //- section(class="footer-contact-info flex")
       section(class="footer-social social-icons flex")
-        a(:href="$static.header.phoneLink" rel="nofollow")
-          g-image(:alt="$static.header.phoneAltText" :src="$static.header.phoneIcon")
-        a(:href="$static.header.mapLink" target="_blank" rel="nofollow")
-          g-image(:alt="$static.header.mapAltText" :src="$static.header.mapIcon")
-        a(:href="$static.header.facebookLink")
-          g-image(:alt="$static.header.facebookAltText" :src="$static.header.facebookIcon")
-        a(:href="$static.header.instagramLink")
-          g-image(:alt="$static.header.instagramAltText" :src="$static.header.instagramIcon")
-        a(:href="$static.header.emailLink" rel="nofollow")
-          g-image(:alt="$static.header.emailAltText" :src="$static.header.emailIcon")
+            a(
+              :href="$static.header.phoneLink"
+              aria-label="Call Dar's Steaks (opens your native phone app)" 
+              rel="nofollow"
+            )
+              g-image(
+                :alt="$static.header.phoneAltText" 
+                :src="$static.header.phoneIcon"
+              )
+            a(
+              :href="$static.header.mapLink" 
+              target="_blank" 
+              aria-label="See Dar's Steaks on a map (opens in a new window)" 
+              rel="nofollow"
+            )
+              g-image(
+                :alt="$static.header.mapAltText" 
+                :src="$static.header.mapIcon"
+              )
+            a(
+              :href="$static.header.facebookLink" 
+              target="_blank" 
+              aria-label="Visit the Dar's Steaks Facebook Page (opens in a new window)" 
+              rel="nofollow"
+            )
+              g-image(
+                :alt="$static.header.facebookAltText" 
+                :src="$static.header.facebookIcon"
+              )
+            a(
+              :href="$static.header.instagramLink" 
+              target="_blank" 
+              aria-label="Visit the Dar's Steaks Instagram (opens in a new window)" 
+              rel="nofollow"
+            )
+              g-image(:alt="$static.header.instagramAltText" 
+              :src="$static.header.instagramIcon"
+            )
+            a(
+              :href="$static.header.emailLink" 
+              aria-label="Send Dar's Steaks an email (opens your native mail app)" 
+              rel="nofollow"
+            )
+              g-image(
+                :alt="$static.header.emailAltText" 
+                :src="$static.header.emailIcon"
+              )
       section(class="footer-copy")
         p &copy;2020 - Dar's Steaks
 </template>

@@ -7,10 +7,10 @@ import DefaultLayout from '~/layouts/Default.vue'
 
 export default function (Vue, { router, head, isClient }) {
 
-  head.meta.push({
-    name: `robots`,
-    content: `noindex` 
-  })
+  // head.meta.push({
+  //   name: `robots`,
+  //   content: `noindex` 
+  // })
   
   // Set default layout as a global component
   Vue.component('Layout', DefaultLayout)
