@@ -172,7 +172,7 @@ import MenuSection from '~/components/menu/MenuSection.vue'
 export default {
   metaInfo() {
     return {
-      title: `${this.$page.info.menu.title} | ${this.$page.info.siteName}`,
+      title: `${this.$page.info.menu.title}`,
       link: [
         {
           rel: 'canonical', href: `${this.$page.info.siteUrl}${this.$route.fullPath}`

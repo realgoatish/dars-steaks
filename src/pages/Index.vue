@@ -109,7 +109,7 @@ query {
 export default {
   metaInfo() {
     return {
-      title: `${this.$page.info.home.title} | ${this.$page.info.siteName}`,
+      title: `${this.$page.info.home.title}`,
       link: [
         {
           rel: 'canonical', href: `${this.$page.info.siteUrl}${this.$route.fullPath}`
