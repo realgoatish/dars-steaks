@@ -98,6 +98,10 @@ query {
     }
     siteUrl
     siteName
+    siteDescription
+  }
+  logo: globalLayout (path: "/markdowns/global-layout/header/content") {
+    logo
   }
 }
 
@@ -125,7 +129,104 @@ export default {
         { property: 'og:image:width', content: '1200' },
         { property: 'og:image:height', content: '630' },
         { key: 'description', name: 'description', content: `${this.$page.info.home.description}` }
-      ]
+      ],
+      script: [{
+        type: 'application/ld+json',
+        json: {
+          "@context": "https://schema.org", 
+          "@graph": [
+            {
+              "@type": "WebSite",
+              "@id": `${this.$page.info.siteUrl}/#website`,
+              "name": `${this.$page.info.siteName}`,
+              "url": `${this.$page.info.siteUrl}`,
+              "publisher": {
+                "@type": "Restaurant", 
+                "@id": `${this.$page.info.siteUrl}/#westmont`,
+                "name": `${this.$page.info.siteName}`, 
+                "logo": `${this.$page.logo.logo}`,
+                "menu": `${this.$page.info.siteUrl}/menu`,
+                "image": {
+                  "@type": "ImageObject",
+                  "@id": `${this.$page.info.siteUrl}/#primaryimage`
+              },
+                "openingHoursSpecification": [
+                  {
+                    "@type": "OpeningHoursSpecification",
+                    "dayOfWeek": [
+                      "Monday",
+                      "Wednesday",
+                      "Thursday",
+                      "Friday",
+                      "Saturday"
+                    ],
+                    "opens": "11:00",
+                    "closes": "20:00"
+                  },
+                  {
+                    "@type": "OpeningHoursSpecification",
+                    "dayOfWeek": "Sunday",
+                    "opens": "11:00",
+                    "closes": "18:00"
+                  },
+                  {
+                    "@type": "OpeningHoursSpecification",
+                    "dayOfWeek": "Tuesday",
+                    "opens": "00:00",
+                    "closes": "00:00"
+                  }
+                ], 
+                "telephone": "(856)-885-2460",
+                "url": `${this.$page.info.siteUrl}`,
+                "sameAs": [
+                  "https://www.instagram.com/darssteaks/",
+                  "https://www.facebook.com/darssteaks/",
+                ],
+                "hasMap": "https://goo.gl/maps/YT9oDhjWUDifm1ab8",
+                "email": "info@darssteaks.com",
+                "address": {
+                  "@type": "PostalAddress",
+                  "streetAddress": "142 Haddon Avenue",
+                  "addressLocality": "Haddon Township",
+                  "addressRegion": "NJ",
+                  "postalCode": "08108",
+                  "addressCountry": "US"
+                  },
+                "geo": {
+                  "@type": "GeoCoordinates",
+                  "latitude": "39.9101843",
+                  "longitude": "-75.0494215"
+                },
+                "servesCuisine": [ "Cheesesteaks" ], 
+                "priceRange": "$",
+                "paymentAccepted": "Cash, Credit Card",
+                "currenciesAccepted": "USD",
+                "acceptsReservations": "No",
+                "description": `${this.$page.info.siteDescription}`
+              }
+            },
+            {
+              "@type": "ImageObject",
+              "@id": `${this.$page.info.siteUrl}/#primaryimage`,
+              "url": `${this.$page.info.siteUrl}${this.$page.heroImage.image.src}`
+            },
+            {
+              "@type": "WebPage",
+              "@id": `${this.$page.info.siteUrl}/#webpage`,
+              "url": `${this.$page.info.siteUrl}`,
+              "inLanguage": "en-US",
+              "name": `${this.$page.info.home.title} | ${this.$page.info.siteName}`,
+              "isPartOf": {
+                "@id": `${this.$page.info.siteUrl}/#website`
+              },
+              "primaryImageOfPage": {
+                "@id": `${this.$page.info.siteUrl}/#primaryimage`
+              },
+              "description": `${this.$page.info.home.description}`
+            }
+          ]
+        }
+      }]
     }
   }
 }
