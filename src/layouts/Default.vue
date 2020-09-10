@@ -51,7 +51,7 @@
       section(class="footer-social social-icons flex")
         a(:href="$static.header.phoneLink" rel="nofollow")
           g-image(:alt="$static.header.phoneAltText" :src="$static.header.phoneIcon")
-        a(:href="$static.header.mapLink" target="_blank" rel="nofollow noopener")
+        a(:href="$static.header.mapLink" target="_blank" rel="nofollow")
           g-image(:alt="$static.header.mapAltText" :src="$static.header.mapIcon")
         a(:href="$static.header.facebookLink")
           g-image(:alt="$static.header.facebookAltText" :src="$static.header.facebookIcon")
