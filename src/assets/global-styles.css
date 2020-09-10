@@ -66,8 +66,14 @@ footer {
 }
 
 /* BEGIN CODE BLOCK FOR PINNING FOOTER TO BOTTOM OF PAGE */
-html, body, #app, .layout {
-	height: 100%;
+body, #app, .layout {
+	min-height: 100vh;
+	/* min-height: -webkit-fill-available; */
+}
+
+html {
+	height: 100vh;
+	/* height: -webkit-fill-available; */
 }
 
 .layout {
@@ -79,7 +85,7 @@ html, body, #app, .layout {
 	flex: 1 0 auto;
 }
 
-.footer {
+#footer {
 	flex-shrink: 0;
 }
 /* END CODE BLOCK FOR PINNING FOOTER TO BOTTOM OF PAGE */
