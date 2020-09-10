@@ -18,7 +18,7 @@
               :href="$static.header.mapLink" 
               target="_blank" 
               aria-label="See Dar's Steaks on a map (opens in a new window)" 
-              rel="nofollow"
+              rel="nofollow noopener"
             )
               g-image(
                 :alt="$static.header.mapAltText" 
@@ -28,7 +28,7 @@
               :href="$static.header.facebookLink" 
               target="_blank" 
               aria-label="Visit the Dar's Steaks Facebook Page (opens in a new window)" 
-              rel="nofollow"
+              rel="nofollow noopener"
             )
               g-image(
                 :alt="$static.header.facebookAltText" 
@@ -38,7 +38,7 @@
               :href="$static.header.instagramLink" 
               target="_blank" 
               aria-label="Visit the Dar's Steaks Instagram (opens in a new window)" 
-              rel="nofollow"
+              rel="nofollow noopener"
             )
               g-image(:alt="$static.header.instagramAltText" 
               :src="$static.header.instagramIcon"
@@ -104,7 +104,7 @@
               :href="$static.header.mapLink" 
               target="_blank" 
               aria-label="See Dar's Steaks on a map (opens in a new window)" 
-              rel="nofollow"
+              rel="nofollow noopener"
             )
               g-image(
                 :alt="$static.header.mapAltText" 
@@ -114,7 +114,7 @@
               :href="$static.header.facebookLink" 
               target="_blank" 
               aria-label="Visit the Dar's Steaks Facebook Page (opens in a new window)" 
-              rel="nofollow"
+              rel="nofollow noopener"
             )
               g-image(
                 :alt="$static.header.facebookAltText" 
@@ -124,7 +124,7 @@
               :href="$static.header.instagramLink" 
               target="_blank" 
               aria-label="Visit the Dar's Steaks Instagram (opens in a new window)" 
-              rel="nofollow"
+              rel="nofollow noopener"
             )
               g-image(:alt="$static.header.instagramAltText" 
               :src="$static.header.instagramIcon"
