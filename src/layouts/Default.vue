@@ -17,6 +17,7 @@
               g-image(:alt="$static.header.emailAltText" :src="$static.header.emailIcon")
           section(class="header-contact-info flex")
             //- p Use the above icons or #[a(@click.stop href="#footer") click here] for hours and complete contact info
+            p (856)-885-2460
             p 142 Haddon Ave, #[br] Haddon Township, NJ 08108
             p Mon & Weds - Sat: 11 AM - 8 PM
             p Sun: 11 AM - 6 PM
