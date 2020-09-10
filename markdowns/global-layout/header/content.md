@@ -15,3 +15,6 @@ emailAltText: Email Icon
 phoneIcon: "./../../../uploads/icon-phone.svg"
 phoneLink: "tel:+1-856-885-2460"
 phoneAltText: Phone Icon
+mapIcon: "./../../../uploads/icon-map.svg"
+mapLink: https://goo.gl/maps/YT9oDhjWUDifm1ab8
+mapAltText: Google Maps Icon
