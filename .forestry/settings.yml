@@ -7,8 +7,8 @@ sections:
 - type: heading
   label: Global Layout
 - type: directory
-  path: markdowns/global-layout/icons
-  label: Icon Images
+  path: markdowns/global-layout/images
+  label: Images
   create: documents
   match: "*.md"
 - type: directory
