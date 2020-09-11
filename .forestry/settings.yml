@@ -7,8 +7,18 @@ sections:
 - type: heading
   label: Global Layout
 - type: directory
-  path: markdowns/global-layout/header
-  label: Header
+  path: markdowns/global-layout/icons
+  label: Icon Images
+  create: documents
+  match: "*.md"
+- type: directory
+  path: markdowns/global-layout/contact-info
+  label: Contact Info
+  create: documents
+  match: "*.md"
+- type: directory
+  path: markdowns/global-layout/business-hours
+  label: Business Hours
   create: documents
   match: "*.md"
 - type: heading
@@ -50,6 +60,8 @@ sections:
   label: Gyro
   create: documents
   match: "*.md"
+- type: heading
+  label: 
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''
