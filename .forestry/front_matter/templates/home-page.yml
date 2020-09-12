@@ -5,3 +5,6 @@ fields:
 - type: file
   name: image
   label: Image
+- type: text
+  name: imageAltText
+  label: Image Alt Text (description for screen readers)
