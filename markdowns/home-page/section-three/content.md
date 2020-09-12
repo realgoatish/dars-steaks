@@ -8,7 +8,7 @@ What sets us apart is certainly the quality and taste of our cheesesteaks, but a
   
 We have vegan cheesesteaks so delicious and steak-like, it would fool even the meatiest of meat heads.  
   
-We have not one, but *two* gluten-friendly roll options, including a gluten-friendly pretzel roll.  
+We have a gluten-friendly roll option.
   
 We also have unique cheesesteak styles like The Hot Chester with Hot Cheetos, whiz, and banana peppers.  
   
