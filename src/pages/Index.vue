@@ -60,7 +60,7 @@ query {
       quality: 90
       fit: outside
     )
-    imageAltText
+    altText
     content
   }
   sectionTwo: homePage (path: "/markdowns/home-page/section-two/content") {
