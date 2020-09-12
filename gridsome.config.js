@@ -24,12 +24,13 @@ module.exports = {
     }
   },
   plugins: [
-    // {
-    //   use: '@gridsome/plugin-sitemap',
-    //   options: {
-    //     include: ['/', '/menu/', '/uploads/**']
-    //   }
-    // },
+    {
+      use: '@gridsome/plugin-google-analytics',
+      options: {
+        id: 'UA-177624318-1',
+        checkDuplicatedScript: true
+      }
+    },
     {
       use: '@gridsome/source-filesystem',
       options: {
