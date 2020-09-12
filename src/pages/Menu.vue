@@ -161,8 +161,8 @@ query {
     siteUrl
     siteName
   }
-  logo: globalLayout (path: "/markdowns/global-layout/header/content") {
-    logo
+  logo: globalLayout (path: "/markdowns/global-layout/images/logo") {
+    image
   }
   contact: globalLayout(path: "/markdowns/global-layout/contact-info/content") {
     phoneNumber
