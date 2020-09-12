@@ -53,7 +53,6 @@
                 :src="$static.images.emailIcon"
               )
           section(class="header-contact-info flex")
-            //- p Use the above icons or #[a(@click.stop href="#footer") click here] for hours and complete contact info
             p {{ $static.contact.phoneNumber }}
             p {{ $static.contact.streetAddress}}, #[br] {{ $static.contact.city }}, {{ $static.contact.state }} {{ $static.contact.zip }}
             p Mon & Weds - Sat: 11 AM - 8 PM
