@@ -88,7 +88,6 @@
     
     slot
     footer(id="footer" class="flex")
-      //- section(class="footer-contact-info flex")
       section(class="footer-social social-icons flex")
             a(
               :href="phoneLink"
