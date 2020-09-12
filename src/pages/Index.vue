@@ -70,7 +70,7 @@ query {
       quality: 90
       fit: outside
     )
-    imageAltText
+    altText
     content
   }
   sectionThree: homePage (path: "/markdowns/home-page/section-three/content") {
@@ -80,7 +80,7 @@ query {
       quality: 90
       fit: outside
     )
-    imageAltText
+    altText
     content
   }
   heroImage: homePage (path: "/markdowns/home-page/hero-image") {
@@ -89,7 +89,7 @@ query {
       width: 1000
       height: 560
     )
-    imageAltText
+    altText
   }
   info: metadata {
     home {
