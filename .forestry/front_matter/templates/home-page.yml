@@ -6,5 +6,5 @@ fields:
   name: image
   label: Image
 - type: text
-  name: imageAltText
+  name: altText
   label: Image Alt Text (description for screen readers)
