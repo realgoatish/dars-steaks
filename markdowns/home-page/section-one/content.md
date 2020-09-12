@@ -1,6 +1,6 @@
 ---
 image: ./../../../uploads/ds-cheesesteak-1.jpeg
-imageAltText: Cheesesteak
+altText: Cheesesteak
 ---
 # Save Your Toll Money...
 
