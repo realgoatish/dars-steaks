@@ -3,59 +3,59 @@
     section(class="container header")
       header(class="flex")
         section(class="column flex")
-          g-image(:alt="$static.header.logoAltText" :src="$static.header.logo")
+          g-image(:alt="$static.images.logoAltText" :src="$static.images.logo")
           section(class="social-icons flex")
             a(
-              :href="$static.header.phoneLink"
+              :href="phoneLink"
               aria-label="Call Dar's Steaks (opens your native phone app)" 
               rel="nofollow"
             )
               g-image(
-                :alt="$static.header.phoneAltText" 
-                :src="$static.header.phoneIcon"
+                :alt="$static.images.phoneAltText" 
+                :src="$static.images.phoneIcon"
               )
             a(
-              :href="$static.header.mapLink" 
+              :href="$static.contact.googleMapsLink" 
               target="_blank" 
               aria-label="See Dar's Steaks on a map (opens in a new window)" 
               rel="nofollow noopener"
             )
               g-image(
-                :alt="$static.header.mapAltText" 
-                :src="$static.header.mapIcon"
+                :alt="$static.images.mapAltText" 
+                :src="$static.images.mapIcon"
               )
             a(
-              :href="$static.header.facebookLink" 
+              :href="$static.contact.facebookLink" 
               target="_blank" 
               aria-label="Visit the Dar's Steaks Facebook Page (opens in a new window)" 
               rel="nofollow noopener"
             )
               g-image(
-                :alt="$static.header.facebookAltText" 
-                :src="$static.header.facebookIcon"
+                :alt="$static.images.facebookAltText" 
+                :src="$static.images.facebookIcon"
               )
             a(
-              :href="$static.header.instagramLink" 
+              :href="$static.contact.instagramLink" 
               target="_blank" 
               aria-label="Visit the Dar's Steaks Instagram (opens in a new window)" 
               rel="nofollow noopener"
             )
-              g-image(:alt="$static.header.instagramAltText" 
-              :src="$static.header.instagramIcon"
+              g-image(:alt="$static.images.instagramAltText" 
+              :src="$static.images.instagramIcon"
             )
             a(
-              :href="$static.header.emailLink" 
+              :href="emailLink" 
               aria-label="Send Dar's Steaks an email (opens your native mail app)" 
               rel="nofollow"
             )
               g-image(
-                :alt="$static.header.emailAltText" 
-                :src="$static.header.emailIcon"
+                :alt="$static.images.emailAltText" 
+                :src="$static.images.emailIcon"
               )
           section(class="header-contact-info flex")
             //- p Use the above icons or #[a(@click.stop href="#footer") click here] for hours and complete contact info
-            p (856)-885-2460
-            p 142 Haddon Ave, #[br] Haddon Township, NJ 08108
+            p {{ $static.contact.phoneNumber }}
+            p {{ $static.contact.streetAddress}}, #[br] {{ $static.contact.city }}, {{ $static.contact.state }} {{ $static.contact.zip }}
             p Mon & Weds - Sat: 11 AM - 8 PM
             p Sun: 11 AM - 6 PM
             p Closed Tues
@@ -68,8 +68,8 @@
           div(class="menu__link menu__link--toggle")
             g-image(
               class="hamburger-menu"
-              :alt="$static.header.hamburgerMenuAltText"
-              :src="$static.header.hamburgerMenu"
+              :alt="$static.images.hamburgerMenuAltText"
+              :src="$static.images.hamburgerMenu"
               aria-label="menu"
               )
             ul(class="dropdown-menu")
@@ -92,51 +92,51 @@
       //- section(class="footer-contact-info flex")
       section(class="footer-social social-icons flex")
             a(
-              :href="$static.header.phoneLink"
+              :href="phoneLink"
               aria-label="Call Dar's Steaks (opens your native phone app)" 
               rel="nofollow"
             )
               g-image(
-                :alt="$static.header.phoneAltText" 
-                :src="$static.header.phoneIcon"
+                :alt="$static.images.phoneAltText" 
+                :src="$static.images.phoneIcon"
               )
             a(
-              :href="$static.header.mapLink" 
+              :href="$static.contact.googleMapsLink" 
               target="_blank" 
               aria-label="See Dar's Steaks on a map (opens in a new window)" 
               rel="nofollow noopener"
             )
               g-image(
-                :alt="$static.header.mapAltText" 
-                :src="$static.header.mapIcon"
+                :alt="$static.images.mapAltText" 
+                :src="$static.images.mapIcon"
               )
             a(
-              :href="$static.header.facebookLink" 
+              :href="$static.contact.facebookLink" 
               target="_blank" 
               aria-label="Visit the Dar's Steaks Facebook Page (opens in a new window)" 
               rel="nofollow noopener"
             )
               g-image(
-                :alt="$static.header.facebookAltText" 
-                :src="$static.header.facebookIcon"
+                :alt="$static.images.facebookAltText" 
+                :src="$static.images.facebookIcon"
               )
             a(
-              :href="$static.header.instagramLink" 
+              :href="$static.contact.instagramLink" 
               target="_blank" 
               aria-label="Visit the Dar's Steaks Instagram (opens in a new window)" 
               rel="nofollow noopener"
             )
-              g-image(:alt="$static.header.instagramAltText" 
-              :src="$static.header.instagramIcon"
+              g-image(:alt="$static.images.instagramAltText" 
+              :src="$static.images.instagramIcon"
             )
             a(
-              :href="$static.header.emailLink" 
+              :href="emailLink" 
               aria-label="Send Dar's Steaks an email (opens your native mail app)" 
               rel="nofollow"
             )
               g-image(
-                :alt="$static.header.emailAltText" 
-                :src="$static.header.emailIcon"
+                :alt="$static.images.emailAltText" 
+                :src="$static.images.emailIcon"
               )
       section(class="footer-copy")
         p &copy;2020 - Dar's Steaks
@@ -147,7 +147,7 @@ query {
   metadata {
     siteName
   }
-  header: globalLayout (path: "/markdowns/global-layout/header/content") {
+  images: globalLayout (path: "/markdowns/global-layout/images/content") {
     logo(
       quality: 90
       width: 405
@@ -161,20 +161,26 @@ query {
     )
     hamburgerMenuAltText
     instagramIcon
-    instagramLink
     instagramAltText
     facebookIcon
-    facebookLink
     facebookAltText
     emailIcon
-    emailLink
     emailAltText
     phoneIcon
-    phoneLink
     phoneAltText
     mapIcon
-    mapLink
     mapAltText
+  }
+  contact: globalLayout (path: "/markdowns/global-layout/contact-info/content") {
+    instagramLink
+    facebookLink
+    email
+    phoneNumber
+    googleMapsLink
+    streetAddress
+    city
+    state
+    zip
   }
 }
 </static-query>
@@ -186,7 +192,9 @@ export default {
       dropDowns: {
         ranking: { open: false}  
       },
-      isActive: null
+      isActive: null,
+      phoneLink: null,
+      emailLink: null
     }
   },
   mounted() {
@@ -196,6 +204,9 @@ export default {
         self.close()
       }
     }, false)
+    // Phone number and email are stored in CMS. Feed them into "tel..." and "mailto..." link formatting so we can v-bind in the template
+    this.phoneLink = `tel:+1-${this.$static.contact.phoneNumber.replace('(', '').replace(')', '')}`,
+    this.emailLink = `mailto: ${this.$static.contact.email}`
   },
   methods: {
     toggle: function(dropdownName) {
