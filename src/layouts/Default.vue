@@ -3,54 +3,54 @@
     section(class="container header")
       header(class="flex")
         section(class="column flex")
-          g-image(:alt="$static.images.logoAltText" :src="$static.images.logo")
+          g-image(:alt="$static.logo.altText" :src="$static.logo.image")
           section(class="social-icons flex")
             a(
               :href="phoneLink"
-              aria-label="Call Dar's Steaks (opens your native phone app)" 
+              :aria-label="$static.phone.ariaLabel" 
               rel="nofollow"
             )
               g-image(
-                :alt="$static.images.phoneAltText" 
-                :src="$static.images.phoneIcon"
+                :alt="$static.phone.altText" 
+                :src="$static.phone.image"
               )
             a(
               :href="$static.contact.googleMapsLink" 
               target="_blank" 
-              aria-label="See Dar's Steaks on a map (opens in a new window)" 
+              :aria-label="$static.map.ariaLabel" 
               rel="nofollow noopener"
             )
               g-image(
-                :alt="$static.images.mapAltText" 
-                :src="$static.images.mapIcon"
+                :alt="$static.map.altText" 
+                :src="$static.map.image"
               )
             a(
               :href="$static.contact.facebookLink" 
               target="_blank" 
-              aria-label="Visit the Dar's Steaks Facebook Page (opens in a new window)" 
+              :aria-label="$static.facebook.ariaLabel" 
               rel="nofollow noopener"
             )
               g-image(
-                :alt="$static.images.facebookAltText" 
-                :src="$static.images.facebookIcon"
+                :alt="$static.facebook.altText" 
+                :src="$static.facebook.image"
               )
             a(
               :href="$static.contact.instagramLink" 
               target="_blank" 
-              aria-label="Visit the Dar's Steaks Instagram (opens in a new window)" 
+              :aria-label="$static.instagram.ariaLabel" 
               rel="nofollow noopener"
             )
-              g-image(:alt="$static.images.instagramAltText" 
-              :src="$static.images.instagramIcon"
+              g-image(:alt="$static.instagram.altText" 
+              :src="$static.instagram.image"
             )
             a(
               :href="emailLink" 
-              aria-label="Send Dar's Steaks an email (opens your native mail app)" 
+              :aria-label="$static.email.ariaLabel" 
               rel="nofollow"
             )
               g-image(
-                :alt="$static.images.emailAltText" 
-                :src="$static.images.emailIcon"
+                :alt="$static.email.altText" 
+                :src="$static.email.image"
               )
           section(class="header-contact-info flex")
             p {{ $static.contact.phoneNumber }}
@@ -67,9 +67,9 @@
           div(class="menu__link menu__link--toggle")
             g-image(
               class="hamburger-menu"
-              :alt="$static.images.hamburgerMenuAltText"
-              :src="$static.images.hamburgerMenu"
-              aria-label="menu"
+              :alt="$static.hamburgerMenu.altText"
+              :src="$static.hamburgerMenu.image"
+              :aria-label="$static.hamburgerMenu.ariaLabel"
               )
             ul(class="dropdown-menu")
               li(class="dropdown-menu__item")
@@ -91,50 +91,50 @@
       section(class="footer-social social-icons flex")
             a(
               :href="phoneLink"
-              aria-label="Call Dar's Steaks (opens your native phone app)" 
+              :aria-label="$static.phone.ariaLabel" 
               rel="nofollow"
             )
               g-image(
-                :alt="$static.images.phoneAltText" 
-                :src="$static.images.phoneIcon"
+                :alt="$static.phone.altText" 
+                :src="$static.phone.image"
               )
             a(
               :href="$static.contact.googleMapsLink" 
               target="_blank" 
-              aria-label="See Dar's Steaks on a map (opens in a new window)" 
+              :aria-label="$static.map.ariaLabel" 
               rel="nofollow noopener"
             )
               g-image(
-                :alt="$static.images.mapAltText" 
-                :src="$static.images.mapIcon"
+                :alt="$static.map.altText" 
+                :src="$static.map.image"
               )
             a(
               :href="$static.contact.facebookLink" 
               target="_blank" 
-              aria-label="Visit the Dar's Steaks Facebook Page (opens in a new window)" 
+              :aria-label="$static.facebook.ariaLabel" 
               rel="nofollow noopener"
             )
               g-image(
-                :alt="$static.images.facebookAltText" 
-                :src="$static.images.facebookIcon"
+                :alt="$static.facebook.altText" 
+                :src="$static.facebook.image"
               )
             a(
               :href="$static.contact.instagramLink" 
               target="_blank" 
-              aria-label="Visit the Dar's Steaks Instagram (opens in a new window)" 
+              :aria-label="$static.instagram.ariaLabel" 
               rel="nofollow noopener"
             )
-              g-image(:alt="$static.images.instagramAltText" 
-              :src="$static.images.instagramIcon"
+              g-image(:alt="$static.instagram.altText" 
+              :src="$static.instagram.image"
             )
             a(
               :href="emailLink" 
-              aria-label="Send Dar's Steaks an email (opens your native mail app)" 
+              :aria-label="$static.email.ariaLabel" 
               rel="nofollow"
             )
               g-image(
-                :alt="$static.images.emailAltText" 
-                :src="$static.images.emailIcon"
+                :alt="$static.email.altText" 
+                :src="$static.email.image"
               )
       section(class="footer-copy")
         p &copy;2020 - Dar's Steaks
@@ -145,29 +145,47 @@ query {
   metadata {
     siteName
   }
-  images: globalLayout (path: "/markdowns/global-layout/images/content") {
-    logo(
+  logo: globalLayout (path: "/markdowns/global-layout/images/logo") {
+    image(
       quality: 90
       width: 405
       height: 120
     )
-    logoAltText
-    hamburgerMenu(
+    altText
+  }
+  hamburgerMenu: globalLayout (path: "/markdowns/global-layout/images/hamburger-menu") {
+    image(
       quality: 60
       width: 36
       height: 24
     )
-    hamburgerMenuAltText
-    instagramIcon
-    instagramAltText
-    facebookIcon
-    facebookAltText
-    emailIcon
-    emailAltText
-    phoneIcon
-    phoneAltText
-    mapIcon
-    mapAltText
+    altText
+    ariaLabel
+  }
+  instagram: globalLayout (path: "/markdowns/global-layout/images/instagram") {
+    image
+    altText
+    ariaLabel
+  }
+  facebook: globalLayout (path: "/markdowns/global-layout/images/facebook") {
+    image
+    altText
+    ariaLabel
+  }
+  email: globalLayout (path: "/markdowns/global-layout/images/email") {
+    image
+    altText
+    ariaLabel
+  }
+  phone: globalLayout (path: "/markdowns/global-layout/images/phone") {
+    image
+    altText
+    ariaLabel
+  }
+  map: globalLayout (path: "/markdowns/global-layout/images/map") {
+    image
+    altText
+    ariaLabel
   }
   contact: globalLayout (path: "/markdowns/global-layout/contact-info/content") {
     instagramLink
