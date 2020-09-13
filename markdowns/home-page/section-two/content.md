@@ -1,6 +1,6 @@
 ---
 image: ./../../../uploads/zeppole.jpeg
-imageAltText: New York Style Zeppole doughnuts
+altText: New York Style Zeppole doughnuts
 ---
 # World's Best Cheesesteaks
 

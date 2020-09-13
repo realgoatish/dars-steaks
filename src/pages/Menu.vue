@@ -161,8 +161,19 @@ query {
     siteUrl
     siteName
   }
-  logo: globalLayout (path: "/markdowns/global-layout/header/content") {
-    logo
+  logo: globalLayout (path: "/markdowns/global-layout/images/logo") {
+    image
+  }
+  contact: globalLayout(path: "/markdowns/global-layout/contact-info/content") {
+    phoneNumber
+    email
+    googleMapsLink
+    instagramLink
+    facebookLink
+    streetAddress
+    city
+    state
+    zip
   }
 }
 
@@ -238,20 +249,20 @@ export default {
                     "closes": "00:00"
                   }
                 ], 
-                "telephone": "(856)-885-2460",
+                "telephone": `${this.$page.contact.phoneNumber}`,
                 "url": `${this.$page.info.siteUrl}`,
                 "sameAs": [
-                  "https://www.instagram.com/darssteaks/",
-                  "https://www.facebook.com/darssteaks/",
+                  `${this.$page.contact.instagramLink}`,
+                  `${this.$page.contact.facebookLink}`,
                 ],
-                "hasMap": "https://goo.gl/maps/YT9oDhjWUDifm1ab8",
-                "email": "info@darssteaks.com",
+                "hasMap": `${this.$page.contact.googleMapsLink}`,
+                "email": `${this.$page.contact.email}`,
                 "address": {
                   "@type": "PostalAddress",
-                  "streetAddress": "142 Haddon Avenue",
-                  "addressLocality": "Haddon Township",
-                  "addressRegion": "NJ",
-                  "postalCode": "08108",
+                  "streetAddress": `${this.$page.contact.streetAddress}`,
+                  "addressLocality": `${this.$page.contact.city}`,
+                  "addressRegion": `${this.$page.contact.state}`,
+                  "postalCode": `${this.$page.contact.zip}`,
                   "addressCountry": "US"
                   },
                 "geo": {

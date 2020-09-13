@@ -1,6 +1,6 @@
 ---
 image: ./../../../uploads/ds-vegan-cheesesteak.jpeg
-imageAltText: Vegan Cheesesteak
+altText: Vegan Cheesesteak
 ---
 # You Want It, We Got It
 
