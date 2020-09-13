@@ -12,6 +12,11 @@ sections:
   create: documents
   match: "*.md"
 - type: directory
+  path: markdowns/global-layout/header
+  label: Header
+  create: documents
+  match: "*.md"
+- type: directory
   path: markdowns/global-layout/contact-info
   label: Contact Info
   create: documents
@@ -60,8 +65,6 @@ sections:
   label: Gyro
   create: documents
   match: "*.md"
-- type: heading
-  label: 
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''
