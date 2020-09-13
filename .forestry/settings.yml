@@ -12,11 +12,6 @@ sections:
   create: documents
   match: "*.md"
 - type: directory
-  path: markdowns/global-layout/header
-  label: Header
-  create: documents
-  match: "*.md"
-- type: directory
   path: markdowns/global-layout/contact-info
   label: Contact Info
   create: documents
