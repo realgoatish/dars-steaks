@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <urlset  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"> 
 <url>
-<loc>https://www.darssteaks.com</loc>
+<loc>https://www.darssteaks.com/</loc>
 <image:image>
 <image:loc>https://www.darssteaks.com/assets/static/dars-steaks-serif.ad7952d.43fe416dc8e2dcac6647c583766f619e.png</image:loc>
 <image:title>Dar&amp;apos;s Steaks Logo</image:title>
@@ -48,7 +48,7 @@
 </image:image>
 </url>
 <url>
-<loc>https://www.darssteaks.com/menu</loc>
+<loc>https://www.darssteaks.com/menu/</loc>
 <image:image>
 <image:loc>https://www.darssteaks.com/assets/static/dars-steaks-serif.ad7952d.43fe416dc8e2dcac6647c583766f619e.png</image:loc>
 <image:title>Dar&amp;apos;s Steaks Logo</image:title>
