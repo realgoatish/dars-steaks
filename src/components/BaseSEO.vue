@@ -250,7 +250,7 @@ export default {
         meta.image = `${this.$static.defaultInfo.siteUrl.slice(0, -1)}${homePage.heroImage.image.src}`
       }
       if (homePage.heroImage.imageAltText) {
-        meta.altText = homePage.heroImage.imageAltText
+        meta.altText = homePage.heroImage.altText
       }
       return meta
     },
