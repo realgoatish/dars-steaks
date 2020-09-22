@@ -85,8 +85,8 @@
               g-link(class="desktop-nav-link" to="/") Home
             li
               g-link(class="desktop-nav-link" to="/menu/") Menu
-    
-    slot
+    BaseSEO
+      slot
     footer(id="footer" class="flex")
       section(class="footer-social social-icons flex")
             a(
@@ -202,7 +202,13 @@ query {
 </static-query>
 
 <script>
+
+import BaseSEO from '~/components/BaseSEO.vue'
+
 export default {
+  components: {
+    BaseSEO
+  },
   data() {
     return {
       dropDowns: {

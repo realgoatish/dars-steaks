@@ -8,7 +8,7 @@ module.exports = {
   siteName: `Dar's Steaks`,
   siteDescription: `Serving the World's Best Cheesesteaks in Westmont, NJ`,
   titleTemplate: `%s | Dar's Steaks`,
-  siteUrl: 'https://www.darssteaks.com',
+  siteUrl: 'https://www.darssteaks.com/',
   permalinks: {
     trailingSlash: true
   },
