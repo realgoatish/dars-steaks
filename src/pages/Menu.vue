@@ -182,9 +182,6 @@ export default {
     this.menuSectionTitles.push(this.$page.extrasHeaders.title)
 
   },
-  // mounted() {
-  //   console.log(this.$page)
-  // },
   methods: {
     showSelectedSection(sectionTitle) {
       this.currentSection = sectionTitle
