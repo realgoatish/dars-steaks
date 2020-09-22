@@ -7,24 +7,23 @@ query {
     siteName
     siteDescription
   }
-  zeppole: allMenuContent(
-    filter: {
-      fileInfo: {
-        directory: {
-          eq: "markdowns/menu/zeppole"
-        }
-      }
-    }, sortBy: "number", skip: 1, order: ASC) {
-    edges {
-      node {
-        itemImage(
-          width: 500
-          height: 500
-          quality: 90
-          fit: outside
-        )
-      }
-    }
+  logo: globalLayout (path: "/markdowns/global-layout/images/logo") {
+    image(
+      width: 120
+      height: 120
+    )
+  }
+  contact: globalLayout(path: "/markdowns/global-layout/contact-info/content") {
+    phoneNumber
+    email
+    googleMapsLink
+    instagramLink
+    facebookLink
+    yelpLink
+    streetAddress
+    city
+    state
+    zip
   }
 }
 </static-query>
@@ -32,18 +31,160 @@ query {
 <script>
 export default {
   name: 'BaseSEO',
-  mounted() {
-    console.log(this.$page)
-  },
   metaInfo() {
     return {
+      title: `${this.meta.title}`,
+      link: [
+        {
+          rel: 'canonical', href: `${this.meta.pageUrl}`
+        }
+      ],
       meta: [
         { key: "description", name: "description", content: this.meta.description },
         { property: "og:title", content: this.meta.title },
         { property: "og:description", content: this.meta.description },
         { property: "og:image", content: this.meta.image },
-        { property: "og:url", content: this.meta.siteUrl },
-      ]
+        { property: "og:image:alt", content: this.meta.altText},
+        { property: "og:image:width", content: "1200" },
+        { property: "og:image:height", content: "630" },
+        { property: "og:type", content: "website" },
+        { property: "og:url", content: this.meta.pageUrl },
+      ],
+      script: [{
+        type: 'application/ld+json',
+        json: {
+          "@context": "https://schema.org", 
+          "@graph": [
+            {
+              "@type": "Restaurant", 
+              "@id": `${this.meta.siteUrl}#westmont`,
+              "name": this.meta.siteName, 
+              "logo": {
+                "@type": "ImageObject",
+                "@id": `${this.meta.siteUrl}#logo`,
+                "url": this.meta.logo
+              },
+              "menu": `${this.meta.siteUrl}menu`,
+              "openingHoursSpecification": [
+                {
+                  "@type": "OpeningHoursSpecification",
+                  "dayOfWeek": [
+                    "Monday",
+                    "Wednesday",
+                    "Thursday",
+                    "Friday",
+                    "Saturday"
+                  ],
+                  "opens": "11:00",
+                  "closes": "20:00"
+                },
+                {
+                  "@type": "OpeningHoursSpecification",
+                  "dayOfWeek": "Sunday",
+                  "opens": "11:00",
+                  "closes": "18:00"
+                },
+                {
+                  "@type": "OpeningHoursSpecification",
+                  "dayOfWeek": "Tuesday",
+                  "opens": "00:00",
+                  "closes": "00:00"
+                }
+              ], 
+              "telephone": this.meta.phoneNumber,
+              "url": this.meta.siteUrl,
+              "sameAs": [
+                this.meta.instagramLink,
+                this.meta.facebookLink,
+                this.meta.yelpLink
+              ],
+              "hasMap": this.meta.googleMapsLink,
+              "email": this.meta.email,
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": this.meta.streetAddress,
+                "addressLocality": this.meta.city,
+                "addressRegion": this.meta.state,
+                "postalCode": this.meta.zip,
+                "addressCountry": "US"
+                },
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": "39.9101843",
+                "longitude": "-75.0494215"
+              },
+              "servesCuisine": [ "Cheesesteaks" ], 
+              "priceRange": "$",
+              "paymentAccepted": "Cash, Credit Card",
+              "currenciesAccepted": "USD",
+              "acceptsReservations": "No",
+              "description": this.meta.siteDescription
+            },
+            {
+              "@type": "WebSite",
+              "@id": `${this.meta.siteUrl}#website`,
+              "name": this.meta.siteName,
+              "url": this.meta.siteUrl,
+              "potentialAction": {
+                "@type": "SearchAction",
+                "target": `${this.meta.siteUrl}?s={search_term_string}`,
+                "query-input": "required name=search_term_string"
+              },
+              "publisher": { 
+                "@id": `${this.meta.siteUrl}#westmont`
+              }
+            },
+            {
+              "@type": "WebPage",
+              "@id": `${this.meta.pageUrl}#webpage`,
+              "url": this.meta.pageUrl,
+              "inLanguage": "en-US",
+              "name": `${this.meta.title} | ${this.meta.siteName}`,
+              "image": {
+                "@type": "ImageObject",
+                "@id": `${this.meta.pageUrl}#primaryimage`,
+                "url": this.meta.image
+              },
+              "isPartOf": {
+                "@id": `${this.meta.siteUrl}#website`
+              },
+              "primaryImageOfPage": {
+                "@id": `${this.meta.pageUrl}#primaryimage`
+              },
+              "description": this.meta.description,
+              "breadcrumb": {
+                "@id": `${this.meta.pageUrl}#breadcrumb`
+              }
+            },
+            {
+              "@type": "BreadcrumbList",
+              "@id": `${this.meta.pageUrl}#breadcrumb`,
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "item": {
+                    "@type": "WebPage",
+                    "@id": this.meta.siteUrl,
+                    "url": this.meta.siteUrl,
+                    "name": "Home"
+                  }
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "item": {
+                    "@type": "WebPage",
+                    "@id": `${this.meta.siteUrl}menu/`,
+                    "url": `${this.meta.siteUrl}menu/`,
+                    "name": "Menu"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      }]
     }
   },
   computed: {
@@ -62,10 +203,23 @@ export default {
     meta_default() {
       return {
         siteName: this.$static.defaultInfo.siteName,
-        siteUrl: `${this.$static.defaultInfo.siteUrl}${this.$route.fullPath}`,
-        image: `${this.$static.defaultInfo.siteUrl}${this.$static.zeppole.itemImage }`,
+        siteUrl: this.$static.defaultInfo.siteUrl,
+        pageUrl: `${this.$static.defaultInfo.siteUrl}${this.$route.fullPath === '/' ? '' : this.$route.fullPath}`,
+        image: `${this.$static.defaultInfo.siteUrl.slice(0, -1)}${this.$static.logo.image.src}`,
+        altText: "THIS IS DEFAULT IMAGE ALT TEXT",
         title: "THIS IS THE DEFAULT TITLE",
-        description: "THIS IS THE DEFAULT DESCRIPTION"
+        description: "THIS IS THE DEFAULT DESCRIPTION",
+        logo: `${this.$static.defaultInfo.siteUrl.slice(0, -1)}${this.$static.logo.image.src}`,
+        phoneNumber: this.$static.contact.phoneNumber,
+        streetAddress: this.$static.contact.streetAddress,
+        city: this.$static.contact.city,
+        state: this.$static.contact.state,
+        zip: this.$static.contact.zip,
+        email: this.$static.contact.email,
+        googleMapsLink: this.$static.contact.googleMapsLink,
+        instagramLink: this.$static.contact.instagramLink,
+        facebookLink: this.$static.contact.facebookLink,
+        yelpLink: this.$static.contact.yelpLink
       }
     },
     meta_data() {
@@ -93,7 +247,10 @@ export default {
       if (
         homePage.heroImage.image.src
       ) {
-        meta.image = homePage.heroImage.image.src
+        meta.image = `${this.$static.defaultInfo.siteUrl.slice(0, -1)}${homePage.heroImage.image.src}`
+      }
+      if (homePage.heroImage.imageAltText) {
+        meta.altText = homePage.heroImage.imageAltText
       }
       return meta
     },
@@ -109,7 +266,12 @@ export default {
       if (
         menuPage.steaksContent.edges[menuPage.steaksContent.edges.findIndex(x => x.node.itemName === 'Hot Chester')].node.itemImage.src
       ) {
-        meta.image = `${this.$static.defaultInfo.siteUrl}${menuPage.steaksContent.edges[menuPage.steaksContent.edges.findIndex(x => x.node.itemName === 'Hot Chester')].node.itemImage.src}`
+        meta.image = `${this.$static.defaultInfo.siteUrl.slice(0, -1)}${menuPage.steaksContent.edges[menuPage.steaksContent.edges.findIndex(x => x.node.itemName === 'Hot Chester')].node.itemImage.src}`
+      }
+      if (
+        menuPage.steaksContent.edges[menuPage.steaksContent.edges.findIndex(x => x.node.itemName === 'Hot Chester')]
+      ) {
+        meta.altText = menuPage.steaksContent.edges[menuPage.steaksContent.edges.findIndex(x => x.node.itemName === 'Hot Chester')].node.itemName
       }
       return meta
     }
