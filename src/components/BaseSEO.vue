@@ -113,6 +113,9 @@ export default {
                 "latitude": "39.9101843",
                 "longitude": "-75.0494215"
               },
+              "image": {
+                "@id": `${this.meta.siteUrl}#logo`
+              },
               "servesCuisine": [ "Cheesesteaks" ], 
               "priceRange": "$",
               "paymentAccepted": "Cash, Credit Card",
