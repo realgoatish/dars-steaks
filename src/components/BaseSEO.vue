@@ -139,7 +139,7 @@ export default {
             },
             {
               "@type": "WebPage",
-              "@id": `${this.meta.pageUrl}/#webpage`,
+              "@id": `${this.meta.pageUrl}#webpage`,
               "url": this.meta.pageUrl,
               "inLanguage": "en-US",
               "name": `${this.meta.title} | ${this.meta.siteName}`,
@@ -168,7 +168,7 @@ export default {
                   "position": 1,
                   "item": {
                     "@type": "WebPage",
-                    "@id": `${this.meta.siteUrl}/#webpage`,
+                    "@id": `${this.meta.siteUrl}#webpage`,
                     "url": this.meta.siteUrl,
                     "name": "Home"
                   }
