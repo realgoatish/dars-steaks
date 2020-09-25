@@ -169,7 +169,7 @@ export default {
                   "item": {
                     "@type": "WebPage",
                     "@id": `${this.meta.siteUrl}#webpage`,
-                    "url": this.meta.siteUrl,
+                    "url": `${this.meta.siteUrl}`,
                     "name": "Home"
                   }
                 },
@@ -207,7 +207,7 @@ export default {
       return {
         siteName: this.$static.defaultInfo.siteName,
         siteUrl: this.$static.defaultInfo.siteUrl,
-        pageUrl: `${this.$static.defaultInfo.siteUrl}${this.$route.fullPath === '/' ? '' : this.$route.fullPath}`,
+        pageUrl: `${this.$static.defaultInfo.siteUrl.slice(0, -1)}${this.$route.fullPath}`,
         image: `${this.$static.defaultInfo.siteUrl.slice(0, -1)}${this.$static.logo.image.src}`,
         altText: "THIS IS DEFAULT IMAGE ALT TEXT",
         title: "THIS IS THE DEFAULT TITLE",
