@@ -25,6 +25,14 @@ query {
     state
     zip
   }
+  allRoutes: allPage(filter: {
+    path: {
+      regex: "^[^0-9]+$"
+    }
+  }) 
+  {
+    path
+  }
 }
 </static-query>
 
@@ -168,9 +176,9 @@ export default {
                   "position": 1,
                   "item": {
                     "@type": "WebPage",
-                    "@id": `${this.meta.siteUrl}#webpage`,
-                    "url": `${this.meta.siteUrl}`,
-                    "name": "Home"
+                    "@id": `${this.meta.pageUrl}#webpage`,
+                    "url": `${this.meta.pageUrl}`,
+                    "name": `${this.metaType === 'home_page' ? 'Home' : 'Menu'}`
                   }
                 },
                 {
@@ -178,10 +186,10 @@ export default {
                   "position": 2,
                   "item": {
                     "@type": "WebPage",
-                    "@id": `${this.meta.siteUrl}menu/#webpage`,
-                    "url": `${this.meta.siteUrl}menu/`,
-                    "name": "Menu"
-                  }
+                    "@id": `${this.metaType === 'home_page' ? [this.meta.siteUrl + 'menu/'] : this.meta.siteUrl}#webpage`,
+                    "url": `${this.metaType === 'home_page' ? [this.meta.siteUrl + 'menu/'] : this.meta.siteUrl}`,
+                    "name": `${this.metaType === 'home_page' ? 'Menu' : 'Home'}`
+                  },
                 }
               ]
             }
@@ -190,6 +198,19 @@ export default {
       }]
     }
   },
+  // mounted() {
+  //   console.log(this.metaType)
+  // },
+  // data() {
+  //   return {
+  //     type_map: {
+  //       home_page:
+  //         this.$route.path === '/',
+  //       menu_page:
+  //         this.$route.path.includes('menu')
+  //     }
+  //   }
+  // },
   computed: {
     metaType() {
       const type_map = {
@@ -222,7 +243,7 @@ export default {
         googleMapsLink: this.$static.contact.googleMapsLink,
         instagramLink: this.$static.contact.instagramLink,
         facebookLink: this.$static.contact.facebookLink,
-        yelpLink: this.$static.contact.yelpLink
+        yelpLink: this.$static.contact.yelpLink,
       }
     },
     meta_data() {
@@ -255,6 +276,28 @@ export default {
       if (homePage.heroImage.imageAltText) {
         meta.altText = homePage.heroImage.altText
       }
+      // meta.breadCrumbList = [
+      //   {
+      //     "@type": "ListItem",
+      //     "position": 1,
+      //     "item": {
+      //       "@type": "WebPage",
+      //       "@id": `${this.meta.pageUrl}#webpage`,
+      //       "url": `${this.meta.pageUrl}`,
+      //       "name": `Home`
+      //     }
+      //   },
+      //   {
+      //     "@type": "ListItem",
+      //     "position": 2,
+      //     "item": {
+      //       "@type": "WebPage",
+      //       "@id": `${this.meta.siteUrl}menu/#webpage`,
+      //       "url": `${this.meta.siteUrl}menu`,
+      //       "name": `Menu`
+      //     },
+      //   }
+      // ]
       return meta
     },
     getMenuPageMeta() {
@@ -276,6 +319,28 @@ export default {
       ) {
         meta.altText = menuPage.steaksContent.edges[menuPage.steaksContent.edges.findIndex(x => x.node.itemName === 'Hot Chester')].node.itemName
       }
+      // meta.breadCrumbList = [
+      //   {
+      //     "@type": "ListItem",
+      //     "position": 1,
+      //     "item": {
+      //       "@type": "WebPage",
+      //       "@id": `${this.meta.pageUrl}#webpage`,
+      //       "url": `${this.meta.pageUrl}`,
+      //       "name": `Menu`
+      //     }
+      //   },
+      //   {
+      //     "@type": "ListItem",
+      //     "position": 2,
+      //     "item": {
+      //       "@type": "WebPage",
+      //       "@id": `${this.meta.siteUrl}#webpage`,
+      //       "url": `${this.meta.siteUrl}`,
+      //       "name": `Home`
+      //     },
+      //   }
+      // ]
       return meta
     }
   },
