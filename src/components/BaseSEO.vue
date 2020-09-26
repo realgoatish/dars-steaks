@@ -198,19 +198,6 @@ export default {
       }]
     }
   },
-  // mounted() {
-  //   console.log(this.metaType)
-  // },
-  // data() {
-  //   return {
-  //     type_map: {
-  //       home_page:
-  //         this.$route.path === '/',
-  //       menu_page:
-  //         this.$route.path.includes('menu')
-  //     }
-  //   }
-  // },
   computed: {
     metaType() {
       const type_map = {
@@ -276,28 +263,7 @@ export default {
       if (homePage.heroImage.imageAltText) {
         meta.altText = homePage.heroImage.altText
       }
-      // meta.breadCrumbList = [
-      //   {
-      //     "@type": "ListItem",
-      //     "position": 1,
-      //     "item": {
-      //       "@type": "WebPage",
-      //       "@id": `${this.meta.pageUrl}#webpage`,
-      //       "url": `${this.meta.pageUrl}`,
-      //       "name": `Home`
-      //     }
-      //   },
-      //   {
-      //     "@type": "ListItem",
-      //     "position": 2,
-      //     "item": {
-      //       "@type": "WebPage",
-      //       "@id": `${this.meta.siteUrl}menu/#webpage`,
-      //       "url": `${this.meta.siteUrl}menu`,
-      //       "name": `Menu`
-      //     },
-      //   }
-      // ]
+
       return meta
     },
     getMenuPageMeta() {
@@ -319,28 +285,7 @@ export default {
       ) {
         meta.altText = menuPage.steaksContent.edges[menuPage.steaksContent.edges.findIndex(x => x.node.itemName === 'Hot Chester')].node.itemName
       }
-      // meta.breadCrumbList = [
-      //   {
-      //     "@type": "ListItem",
-      //     "position": 1,
-      //     "item": {
-      //       "@type": "WebPage",
-      //       "@id": `${this.meta.pageUrl}#webpage`,
-      //       "url": `${this.meta.pageUrl}`,
-      //       "name": `Menu`
-      //     }
-      //   },
-      //   {
-      //     "@type": "ListItem",
-      //     "position": 2,
-      //     "item": {
-      //       "@type": "WebPage",
-      //       "@id": `${this.meta.siteUrl}#webpage`,
-      //       "url": `${this.meta.siteUrl}`,
-      //       "name": `Home`
-      //     },
-      //   }
-      // ]
+
       return meta
     }
   },
