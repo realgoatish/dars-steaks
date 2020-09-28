@@ -176,8 +176,6 @@ export default {
                   "position": 1,
                   "item": {
                     "@type": "WebPage",
-                    "@id": `${this.meta.pageUrl}#webpage`,
-                    "url": `${this.meta.pageUrl}`,
                     "@id": `${this.metaType === 'menu_page' ? this.meta.siteUrl : [this.meta.siteUrl + 'menu/']}#webpage`,
                     "url": `${this.metaType === 'menu_page' ? this.meta.siteUrl : [this.meta.siteUrl + 'menu/']}`,
                     "name": `${this.metaType === 'menu_page' ? 'Home' : 'Menu'}`
@@ -188,8 +186,8 @@ export default {
                   "position": 2,
                   "item": {
                     "@type": "WebPage",
-                    "@id": `${this.metaType === 'menu_page' ? [this.meta.siteUrl + 'menu/'] : this.meta.siteUrl}#webpage`,
-                    "url": `${this.metaType === 'menu_page' ? [this.meta.siteUrl + 'menu/'] : this.meta.siteUrl}`,
+                    "@id": `${this.meta.pageUrl}#webpage`,
+                    "url": `${this.meta.pageUrl}`,
                     "name": `${this.metaType === 'menu_page' ? 'Menu' : 'Home'}`
                   },
                 }
