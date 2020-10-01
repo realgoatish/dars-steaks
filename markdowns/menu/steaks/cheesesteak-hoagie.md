@@ -1,5 +1,7 @@
 ---
-number: 3
+number: "3"
 itemName: Cheesesteak Hoagie
-price: $10.50
-description: lettuce, tomato, raw onion, mayo, s.p.o.
+price: "$10.50"
+description: lettuce, tomato, raw onion, salt and pepper
+
+---
