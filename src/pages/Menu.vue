@@ -175,12 +175,11 @@ export default {
     }
   },
   created() {
-    this.menuSectionTitles.push(this.$page.steaksHeaders.title)
-    this.menuSectionTitles.push(this.$page.sandwichesHeaders.title)
-    this.menuSectionTitles.push(this.$page.friesHeaders.title)
-    this.menuSectionTitles.push(this.$page.zeppoleHeaders.title)
-    this.menuSectionTitles.push(this.$page.extrasHeaders.title)
-
+    // Get data from page query, filter for "Headers" of each menu section, get title for each and push into array for display
+    const eachMenuSectionHeader = Object.entries(this.$page).filter(item => item[0].includes('Headers'))
+    for (const header of eachMenuSectionHeader) {
+      this.menuSectionTitles.push(header[1].title)
+    }
   },
   methods: {
     showSelectedSection(sectionTitle) {
