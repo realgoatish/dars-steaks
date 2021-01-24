@@ -4,6 +4,7 @@
       header(class="flex")
         section(class="column flex")
           g-image(:alt="$static.logo.altText" :src="$static.logo.image")
+          a(class="order-online-link" href="https://www.clover.com/online-ordering/dars-steaks") Click Here to Order Online!
           section(class="social-icons flex")
             a(
               :href="phoneLink"
@@ -73,6 +74,8 @@
               )
             ul(class="dropdown-menu")
               li(class="dropdown-menu__item")
+                a(class="dropdown-menu__link" href="https://www.clover.com/online-ordering/dars-steaks") Order Online
+              li(class="dropdown-menu__item")
                 g-link(class="dropdown-menu__link" to="/") Home
               li(class="dropdown-menu__item")
                 g-link(class="dropdown-menu__link" to="/menu/") Menu
@@ -81,6 +84,8 @@
           class="desktop-nav"
         )
           ul(class="desktop-nav-ul")
+            li
+              a(class="desktop-nav-link" href="https://www.clover.com/online-ordering/dars-steaks") Order Online
             li
               g-link(class="desktop-nav-link" to="/") Home
             li
@@ -275,6 +280,11 @@ color: #EC2825 <== Dar's Steaks Logo letters red
   text-decoration: none;
 }
 
+a.order-online-link {
+  color: inherit;
+  text-decoration: underline;
+}
+
 .dropdown-menu a {
   color: #000;
 }
@@ -399,7 +409,7 @@ section.header {
   /* This width is pretty tight for any more links, but gives us a decent symmetry for now.  Make a decision */
   .desktop-nav {
     display: block;
-    width: 15rem;
+    width: 25rem;
   }
 
   .desktop-nav-ul {
