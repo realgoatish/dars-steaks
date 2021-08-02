@@ -1,4 +1,6 @@
 ---
-number: 4
+number: "4"
 itemName: Pizza Provolone Fries
-price: $5
+price: "$5.50"
+
+---
