@@ -1,4 +1,6 @@
 ---
-number: 1
+number: "1"
 itemName: Plain Steak
-price: $9
+price: "$10"
+
+---
