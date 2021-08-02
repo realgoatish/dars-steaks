@@ -17,5 +17,3 @@ fields:
 - type: file
   name: itemImage
   label: Item Image
-pages:
-- markdowns/menu/steaks/PhillyDilly.md
