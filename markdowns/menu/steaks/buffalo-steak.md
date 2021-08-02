@@ -1,5 +1,7 @@
 ---
-number: 5
+number: "5"
 itemName: Buffalo Steak
-price: $10.50
+price: "$11.50"
 description: buffalo sauce, ranch
+
+---
