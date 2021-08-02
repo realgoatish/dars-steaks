@@ -1,4 +1,6 @@
 ---
-number: 5
+number: "5"
 itemName: extra protein
-price: $4
+price: "$5"
+
+---
