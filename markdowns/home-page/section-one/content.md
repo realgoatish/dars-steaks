@@ -1,17 +1,20 @@
 ---
-image: ./../../../uploads/ds-cheesesteak-1.jpeg
+image: "./../../../uploads/ds-cheesesteak-1.jpeg"
 altText: Cheesesteak
+
 ---
 # Save Your Toll Money...
 
-We have the real deal Philly Cheesesteaks right here at Dar's Steaks!  
+There’s no need to go to Philly for a great cheesesteak. We have them here in Haddon Township, NJ! 
+
+What makes our cheesesteaks so good? 
+
+We believe there are three elements which make our steaks stand with the best of them. 
+
+It’s starts with the quality and cut of meat.  We use 12 ounces of ribeye to build our juicy, flavorful steaks.
+
+Equally as important and delicious is the rolls we use. Delivered to us daily from a local bakery, our bread is soft with the perfect chew and ability to hold up all the cheesy meaty goodness of our steaks.   
   
+Last but not least, we treat the meat on our grill with care. Our steaks are never dry and we make sure to melt the cheese all the way through so that every bite is “_chefs kiss_” perfection.
 
-What makes the best cheesesteak?  Some say it's all about the meat.  It must be a good quality cut of beef and seasoned to perfection.  Ribeye is the best!  
-  
-Some would say it's in how the meat is treated once it's on the grill.  Some prefer it left in whole slices, while others prefer a fine chop.  
-  
-Some say it's all about the bread.  It must be fresh and soft on the inside: perfect to sop up all that delicious cheesesteak flavor with the sensational crusty exterior strong enough to hold it all together.
-
-
-
+Dar’s is a small woman-owned family business and we are proud to be serving our community quality food. 
