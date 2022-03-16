@@ -1,6 +1,6 @@
 ---
-image: "./../../../uploads/zeppole.jpeg"
-altText: New York Style Zeppole doughnuts
+image: "/uploads/vegan-cheesesteak.jpeg"
+altText: Vegan Cheesesteak
 
 ---
 # World's Best Cheesesteaks
