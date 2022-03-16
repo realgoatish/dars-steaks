@@ -1,6 +1,6 @@
 ---
 image: "/uploads/buffalo-chicken-cheesesteak.jpeg"
-altText: Cheesesteak
+altText: Buffalo Chicken Cheesesteak
 
 ---
 # Save Your Toll Money...
