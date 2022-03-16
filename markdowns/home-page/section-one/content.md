@@ -1,5 +1,5 @@
 ---
-image: "./../../../uploads/ds-cheesesteak-1.jpeg"
+image: "/uploads/buffalo-chicken-cheesesteak.jpeg"
 altText: Cheesesteak
 
 ---
@@ -17,4 +17,4 @@ Equally as important and delicious is the rolls we use. Delivered to us daily fr
   
 Last but not least, we treat the meat on our grill with care. Our steaks are never dry and we make sure to melt the cheese all the way through so that every bite is “_chefs kiss_” perfection.
 
-Dar’s is a small woman-owned family business and we are proud to be serving our community quality food. 
+Dar’s is a small woman-owned family business and we are proud to be serving our community quality food.
