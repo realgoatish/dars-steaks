@@ -1,5 +1,5 @@
 ---
-image: "./../../../uploads/ds-vegan-cheesesteak.jpeg"
+image: "/uploads/vegan-cheesesteak.jpeg"
 altText: Vegan Cheesesteak
 
 ---
