@@ -1,6 +1,6 @@
 ---
-image: "/uploads/vegan-cheesesteak.jpeg"
-altText: Vegan Cheesesteak
+image: "/uploads/buffalo-chicken-cheesesteak.jpeg"
+altText: Buffalo Chicken Cheesesteak
 
 ---
 # World's Best Cheesesteaks
