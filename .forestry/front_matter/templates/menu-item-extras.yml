@@ -14,3 +14,5 @@ fields:
 - type: list
   name: arrayItems
   label: List of Items
+pages:
+- markdowns/menu/extras/ck tender.md
