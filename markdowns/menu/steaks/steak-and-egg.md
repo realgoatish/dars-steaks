@@ -1,7 +1,7 @@
 ---
 number: "7"
 itemName: Steak & Egg
-price: "$12.50"
+price: "$12.75"
 description: choice of protein, egg, cheese
 
 ---
