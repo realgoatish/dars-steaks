@@ -1,5 +1,6 @@
 <template lang="pug">
   div(class="layout")
+    p(class="urgent") Please call to order. Our online ordering service is experiencing technical difficulties
     section(class="container header")
       header(class="flex")
         section(class="column flex")
@@ -73,8 +74,8 @@
               :aria-label="$static.hamburgerMenu.ariaLabel"
               )
             ul(class="dropdown-menu")
-              li(class="dropdown-menu__item")
-                a(class="dropdown-menu__link" href="https://www.clover.com/online-ordering/dars-steaks") Order Online
+              //- li(class="dropdown-menu__item")
+              //-   a(class="dropdown-menu__link" href="https://www.clover.com/online-ordering/dars-steaks") Order Online
               li(class="dropdown-menu__item")
                 g-link(class="dropdown-menu__link" to="/") Home
               li(class="dropdown-menu__item")
@@ -84,8 +85,8 @@
           class="desktop-nav"
         )
           ul(class="desktop-nav-ul")
-            li
-              a(class="desktop-nav-link" href="https://www.clover.com/online-ordering/dars-steaks") Order Online
+            //- li
+            //-   a(class="desktop-nav-link" href="https://www.clover.com/online-ordering/dars-steaks") Order Online
             li
               g-link(class="desktop-nav-link" to="/") Home
             li
@@ -260,6 +261,14 @@ color: #1F85B7 <== Dar's Steaks Logo design Lighter blue
 color: #542825 <== Menu Item Descriptions burnt red
 color: #EC2825 <== Dar's Steaks Logo letters red
 */
+
+
+p.urgent {
+  background: orange;
+  color: black;
+  font-size: 1.25rem;
+  text-align: center;
+}
 
 .desktop-nav {
   display: none;
