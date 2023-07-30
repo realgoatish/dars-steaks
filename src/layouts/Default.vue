@@ -1,7 +1,10 @@
 <template lang="pug">
   div(class="layout")
     //- URGENT code for emergency banner
-    //- p(class="urgent") Please call to order. Our online ordering service is experiencing technical difficulties
+    p(class="urgent")
+      | Please call to order from 
+      a(href="/menu/") our menu
+      | , or order via walk-in. Our online ordering service is temporarily down. We apologize for any inconvenience.
     section(class="container header")
       header(class="flex")
         section(class="column flex")
@@ -76,8 +79,8 @@
               )
             ul(class="dropdown-menu")
               //- comment out this <li> if URGENT
-              li(class="dropdown-menu__item")
-                a(class="dropdown-menu__link" href="https://www.clover.com/online-ordering/dars-steaks") Order Online
+              //- li(class="dropdown-menu__item")
+              //-   a(class="dropdown-menu__link" href="https://www.clover.com/online-ordering/dars-steaks") Order Online
               li(class="dropdown-menu__item")
                 g-link(class="dropdown-menu__link" to="/") Home
               li(class="dropdown-menu__item")
@@ -88,8 +91,8 @@
         )
           ul(class="desktop-nav-ul")
             //- comment out this <li> if URGENT
-            li
-              a(class="desktop-nav-link" href="https://www.clover.com/online-ordering/dars-steaks") Order Online
+            //- li
+            //-   a(class="desktop-nav-link" href="https://www.clover.com/online-ordering/dars-steaks") Order Online
             li
               g-link(class="desktop-nav-link" to="/") Home
             li
@@ -266,12 +269,12 @@ color: #EC2825 <== Dar's Steaks Logo letters red
 */
 
 /* URGENT code for emergency banner */
-/* p.urgent {
+p.urgent {
   background: orange;
   color: black;
   font-size: 1.25rem;
   text-align: center;
-} */
+}
 
 .desktop-nav {
   display: none;
