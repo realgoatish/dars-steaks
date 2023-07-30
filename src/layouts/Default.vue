@@ -8,8 +8,9 @@
     section(class="container header")
       header(class="flex")
         section(class="column flex")
-          g-image(:alt="$static.logo.altText" :src="$static.logo.image")
-          a(class="order-online-link" href="https://www.clover.com/online-ordering/dars-steaks") Click Here to Order Online!
+          g-image(:alt="$static.logo.altText" :src="$static.logo.image")              
+          //- comment out this <a> if URGENT
+          //- a(class="order-online-link" href="https://www.clover.com/online-ordering/dars-steaks") Click Here to Order Online!
           section(class="social-icons flex")
             a(
               :href="phoneLink"
