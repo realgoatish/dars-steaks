@@ -7,7 +7,7 @@
             h1 Order Online
           div(class="cluster")
             a(class="order-online-link" href="https://www.clover.com/online-ordering/dars-steaks") Order Pickup
-            a(class="order-online-link" href="https://www.grubhub.com/restaurant/dars-steaks-142-haddon-ave-collingswood/6837120") Order Delivery
+            a(class="order-online-link" href="https://www.grubhub.com/restaurant/dars-steaks-142-haddon-ave-collingswood/6837120") Order GrubHub
 
 </template>
 
