@@ -1,4 +1,6 @@
 ---
-number: 5
+number: "5"
 itemName: Bacon Ranch n' Whiz
-price: $7
+price: "$8"
+
+---

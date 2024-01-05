@@ -1,7 +1,7 @@
 ---
 number: "4"
 itemName: Pizza Steak
-price: "$11.50"
+price: "$12.50"
 description: marinara, provolone cheese
 
 ---

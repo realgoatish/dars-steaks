@@ -1,6 +1,6 @@
 ---
-image: "./../../../uploads/zeppole.jpeg"
-altText: New York Style Zeppole doughnuts
+image: "/uploads/buffalo-chicken-cheesesteak.jpeg"
+altText: Buffalo Chicken Cheesesteak
 
 ---
 # World's Best Cheesesteaks
