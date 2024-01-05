@@ -5,9 +5,11 @@
         div(class="stack")
           div
             h1 Order Online
+            p Order for pickup or delivery by clicking one of the options below
           div(class="cluster")
-            a(class="order-online-link" href="https://www.clover.com/online-ordering/dars-steaks") Order Pickup
-            a(class="order-online-link" href="https://www.grubhub.com/restaurant/dars-steaks-142-haddon-ave-collingswood/6837120") Order GrubHub
+            a(class="order-online-link" href="https://www.clover.com/online-ordering/dars-steaks") In-Store Pickup
+            a(class="order-online-link" href="https://www.grubhub.com/restaurant/dars-steaks-142-haddon-ave-collingswood/6837120") DoorDash
+            a(class="order-online-link" href="https://www.grubhub.com/restaurant/dars-steaks-142-haddon-ave-collingswood/6837120") GrubHub
 
 </template>
 
@@ -51,5 +53,11 @@
 		justify-content: center;
 		align-items: center;
   }
+
+  h1 {
+    color: #004BAD;
+    text-shadow: 1px 1px 2px #1F85B7;
+  }
+
 
 </style>
