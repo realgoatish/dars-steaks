@@ -191,3 +191,17 @@ export default {
   }
 }
 </script>
+
+<style>
+
+  .menu-page-content h1 {
+    color: #004BAD;
+    text-shadow: 1px 1px 2px #1F85B7;
+  } 
+
+  .menu-page-content h2 {
+    color: #000;
+    text-shadow: 1px 1px 2px #f9c3c0;
+  }
+
+</style>

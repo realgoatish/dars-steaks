@@ -171,6 +171,7 @@ section.home-page-text >>> section * + * {
 
 }
 
+/* BEGIN styles duplicated on Menu.vue & OrderOnline.vue */
 .section-one >>> h1 {
   color: #004BAD;
   text-shadow: 1px 1px 2px #1F85B7;
@@ -180,6 +181,7 @@ section.home-page-text >>> section * + * {
   color: #000;
   text-shadow: 1px 1px 2px #f9c3c0;
 }
+/* END duplicated styles */
 
 .section-two >>> p {
   color: #fff;
