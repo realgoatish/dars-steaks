@@ -63,9 +63,14 @@
           section(class="header-contact-info flex")
             p {{ $static.contact.phoneNumber }}
             p {{ $static.contact.streetAddress}}, #[br] {{ $static.contact.city }}, {{ $static.contact.state }} {{ $static.contact.zip }}
-            p Mon & Weds - Sat: 11 AM - 8 PM
-            p Sun: 11 AM - 6 PM
-            p Closed Tues
+            p. 
+              #[u Monday, Wednesday & Thursday]: #[br] 11 AM - 8 PM
+            p. 
+              #[u Friday & Saturday]: #[br] 11 AM - 9 PM
+            p. 
+              #[u Sunday]: #[br] 12 PM - 6 PM
+            p.
+              #[u Closed Tuesday]
             
         nav(
           class="menu__item menu__item--dropdown"
