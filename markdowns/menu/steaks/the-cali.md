@@ -1,7 +1,7 @@
 ---
 number: "6"
 itemName: The Cali
-price: "$13.25"
+price: "$15"
 description: bacon, ranch, american cheese
 
 ---
