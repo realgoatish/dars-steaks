@@ -1,6 +1,6 @@
 ---
 number: "1"
 itemName: Fries
-price: "$6"
+price: "$7"
 
 ---
