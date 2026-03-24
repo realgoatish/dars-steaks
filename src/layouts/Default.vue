@@ -86,7 +86,7 @@
               //- comment out this <li> if URGENT
               li(class="dropdown-menu__item")
                 //- a(class="dropdown-menu__link" href="https://www.clover.com/online-ordering/dars-steaks") Order Online
-                a(class="dropdown-menu__link" href="/order-online") Order Online
+                a(class="dropdown-menu__link" href="/order-online/") Order Online
               li(class="dropdown-menu__item")
                 g-link(class="dropdown-menu__link" to="/") Home
               li(class="dropdown-menu__item")
@@ -99,7 +99,7 @@
             //- comment out this <li> if URGENT
             li
               //- a(class="desktop-nav-link" href="https://www.clover.com/online-ordering/dars-steaks") Order Online
-              a(class="desktop-nav-link" href="/order-online") Order Online
+              a(class="desktop-nav-link" href="/order-online/") Order Online
             li
               g-link(class="desktop-nav-link" to="/") Home
             li

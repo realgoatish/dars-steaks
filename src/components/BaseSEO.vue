@@ -213,7 +213,9 @@ export default {
         home_page:
           this.$route.path === '/',
         menu_page:
-          this.$route.path.includes('menu')
+          this.$route.path.includes('menu'),
+        order_online_page:
+          this.$route.path.includes('order-online')
       }
       return Object.entries(type_map).reduce(
         (type, [new_type, isType]) => (isType ? new_type : type),
@@ -245,7 +247,8 @@ export default {
     meta_data() {
       return {
         home_page: () => this.getHomePageMeta(),
-        menu_page: () => this.getMenuPageMeta()
+        menu_page: () => this.getMenuPageMeta(),
+        order_online_page: () => this.getOrderOnlinePageMeta()
       }
     },
     meta() {
@@ -293,6 +296,18 @@ export default {
         menuPage.steaksContent.edges[menuPage.steaksContent.edges.findIndex(x => x.node.itemName === 'Hot Chester')]
       ) {
         meta.altText = menuPage.steaksContent.edges[menuPage.steaksContent.edges.findIndex(x => x.node.itemName === 'Hot Chester')].node.itemName
+      }
+
+      return meta
+    },
+    getOrderOnlinePageMeta() {
+      const meta = {}
+      const orderOnlinePage = this.$page
+      if (orderOnlinePage.info.orderOnline.description) {
+        meta.description = orderOnlinePage.info.orderOnline.description
+      }
+      if (orderOnlinePage.info.orderOnline.title) {
+        meta.title = orderOnlinePage.info.orderOnline.title
       }
 
       return meta

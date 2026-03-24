@@ -8,79 +8,83 @@ module.exports = {
   siteName: `Dar's Steaks`,
   siteDescription: `Serving the World's Best Cheesesteaks in Westmont, NJ`,
   titleTemplate: `%s | Dar's Steaks`,
-  siteUrl: 'https://www.darssteaks.com/',
+  siteUrl: "https://www.darssteaks.com/",
   permalinks: {
-    trailingSlash: true
+    trailingSlash: true,
   },
-  icon: './uploads/dars-steaks-serif.png',
+  icon: "./uploads/dars-steaks-serif.png",
   metadata: {
     menu: {
       title: `Menu`,
-      description: `Dar's Steaks Menu - Cheesesteaks, sandwiches, fries, and zeppoles in Westmont, NJ`
+      description: `Dar's Steaks Menu - Cheesesteaks, sandwiches, fries, and zeppoles in Westmont, NJ`,
     },
     home: {
       title: `Home`,
-      description: `Serving the world's best cheesesteak in Westmont, NJ`
-    }
+      description: `Serving the world's best cheesesteak in Westmont, NJ`,
+    },
+    orderOnline: {
+      title: `Order Online`,
+      description: `In-store pickup, Doordash, GrubHub or UberEats`,
+    },
   },
   plugins: [
     {
-      use: '@gridsome/plugin-google-analytics',
+      use: "@gridsome/plugin-google-analytics",
       options: {
-        id: 'UA-177624318-1',
-        checkDuplicatedScript: true
-      }
+        id: "UA-177624318-1",
+        checkDuplicatedScript: true,
+      },
     },
     {
-      use: '@gridsome/source-filesystem',
+      use: "@gridsome/source-filesystem",
       options: {
-        path: 'markdowns/menu/**/*.md',
-        typeName: 'MenuContent',
+        path: "markdowns/menu/**/*.md",
+        typeName: "MenuContent",
         resolveAbsolutePaths: true,
         remark: {
-          externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
-          autolinkHeadings: false
-        }
-      }
+          externalLinksRel: ["nofollow", "noopener", "noreferrer"],
+          autolinkHeadings: false,
+        },
+      },
     },
     {
-      use: '@gridsome/source-filesystem',
+      use: "@gridsome/source-filesystem",
       options: {
-        path: 'markdowns/global-layout/**/*.md',
-        typeName: 'GlobalLayout',
+        path: "markdowns/global-layout/**/*.md",
+        typeName: "GlobalLayout",
         resolveAbsolutePaths: true,
         remark: {
-          externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
-          autolinkHeadings: false
-        }
-      }
+          externalLinksRel: ["nofollow", "noopener", "noreferrer"],
+          autolinkHeadings: false,
+        },
+      },
     },
     {
-      use: '@gridsome/source-filesystem',
+      use: "@gridsome/source-filesystem",
       options: {
-        path: 'markdowns/home-page/**/*.md',
-        typeName: 'HomePage',
+        path: "markdowns/home-page/**/*.md",
+        typeName: "HomePage",
         resolveAbsolutePaths: true,
         remark: {
-          externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
-          autolinkHeadings: false
-        }
-      }
+          externalLinksRel: ["nofollow", "noopener", "noreferrer"],
+          autolinkHeadings: false,
+        },
+      },
     },
     {
-      use: '@gridsome/plugin-critical',
+      use: "@gridsome/plugin-critical",
       options: {
-        paths: ['/'],
+        paths: ["/"],
         width: 1300,
-        height: 900
-      }
-    }
+        height: 900,
+      },
+    },
   ],
-  chainWebpack: config => {
+  chainWebpack: (config) => {
     config.module
-    .rule('pug')
-    .test(/\.pug$/)
-    .use('pug-plain-loader')
-    .loader('pug-plain-loader')
-  }
-}
+      .rule("pug")
+      .test(/\.pug$/)
+      .use("pug-plain-loader")
+      .loader("pug-plain-loader");
+  },
+};
