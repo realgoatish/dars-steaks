@@ -7,7 +7,7 @@
             h1 Order Online
             p Order for pickup or delivery by clicking one of the options below
           div(class="cluster")
-            a(class="order-online-link" href="https://www.clover.com/online-ordering/dars-steaks-haddon-township") In-Store Pickup
+            a(class="order-online-link" href="https://www.makeitbutter.com/dars-steaks/online-ordering") In-Store Pickup
             a(class="order-online-link" href="https://www.doordash.com/store/dars-steaks-haddon-township-27547709/") DoorDash
             a(class="order-online-link" href="https://www.grubhub.com/restaurant/dars-steaks-142-haddon-ave-collingswood/6837120") GrubHub
             a(class="order-online-link" href="https://www.ubereats.com/store/dars-steaks/ly6cbBbQUt-Lag7EmDnyPA") Uber Eats
