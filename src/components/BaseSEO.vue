@@ -78,10 +78,9 @@ export default {
                   "@type": "OpeningHoursSpecification",
                   "dayOfWeek": [
                     "Monday",
+                    "Tuesday",
                     "Wednesday",
-                    "Thursday",
-                    "Friday",
-                    "Saturday"
+                    "Thursday"
                   ],
                   "opens": "11:00",
                   "closes": "20:00"
@@ -101,12 +100,6 @@ export default {
                   "opens": "12:00",
                   "closes": "18:00"
                 },
-                {
-                  "@type": "OpeningHoursSpecification",
-                  "dayOfWeek": "Tuesday",
-                  "opens": "00:00",
-                  "closes": "00:00"
-                }
               ], 
               "telephone": this.meta.phoneNumber,
               "url": this.meta.siteUrl,
