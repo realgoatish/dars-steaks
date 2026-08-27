@@ -16,7 +16,7 @@ module.exports = {
   metadata: {
     menu: {
       title: `Menu`,
-      description: `Dar's Steaks Menu - Cheesesteaks, sandwiches, fries, and zeppoles in Westmont, NJ`,
+      description: `Dar's Steaks Menu - Cheesesteaks, wings, sandwiches, fries, and zeppoles in Westmont, NJ`,
     },
     home: {
       title: `Home`,
