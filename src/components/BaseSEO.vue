@@ -72,7 +72,7 @@ export default {
                 "@id": `${this.meta.siteUrl}#logo`,
                 "url": this.meta.logo
               },
-              "menu": `${this.meta.siteUrl}menu`,
+              "menu": `${this.meta.siteUrl}menu/`,
               "openingHoursSpecification": [
                 {
                   "@type": "OpeningHoursSpecification",
