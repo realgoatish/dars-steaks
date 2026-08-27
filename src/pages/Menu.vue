@@ -18,9 +18,10 @@
         :sectionMenuItems="$page.steaksContent.edges"
       )
       MenuSection(
-        v-show="currentSection === $page.extrasHeaders.title"
-        :sectionPrimaryTitle="$page.extrasHeaders.title"
-        :sectionMenuItems="$page.extrasContent.edges"
+        v-show="currentSection === $page.wingsHeaders.title"
+        :sectionPrimaryTitle="$page.wingsHeaders.title"
+        :sectionPrimarySubtext="$page.wingsHeaders.description"
+        :sectionMenuItems="$page.wingsContent.edges"
       )
       MenuSection(
         v-show="currentSection === $page.friesHeaders.title"
@@ -31,6 +32,11 @@
         v-show="currentSection === $page.sandwichesHeaders.title"
         :sectionPrimaryTitle="$page.sandwichesHeaders.title"
         :sectionMenuItems="$page.sandwichesContent.edges"
+      )
+      MenuSection(
+        v-show="currentSection === $page.extrasHeaders.title"
+        :sectionPrimaryTitle="$page.extrasHeaders.title"
+        :sectionMenuItems="$page.extrasContent.edges"
       )
       MenuSection(
         v-show="currentSection === $page.zeppoleHeaders.title"
@@ -71,21 +77,21 @@ query {
       }
     }
   }
-  extrasHeaders: menuContent (path: "/markdowns/menu/extras/headers") {
+  wingsHeaders: menuContent (path: "/markdowns/menu/wings/headers") {
     title
+    description
   }
-  extrasContent: allMenuContent(
+  wingsContent: allMenuContent(
     filter: {
       fileInfo: {
         directory: {
-          eq: "markdowns/menu/extras"
+          eq: "markdowns/menu/wings"
         }
       }
     }, sortBy: "number", skip: 1, order: ASC) {
     edges {
       node {
         itemName
-        arrayItems
         price
       }
     }
@@ -125,6 +131,25 @@ query {
         itemName
         price
         description
+      }
+    }
+  }
+  extrasHeaders: menuContent (path: "/markdowns/menu/extras/headers") {
+    title
+  }
+  extrasContent: allMenuContent(
+    filter: {
+      fileInfo: {
+        directory: {
+          eq: "markdowns/menu/extras"
+        }
+      }
+    }, sortBy: "number", skip: 1, order: ASC) {
+    edges {
+      node {
+        itemName
+        arrayItems
+        price
       }
     }
   }
