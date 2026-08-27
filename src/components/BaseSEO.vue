@@ -126,7 +126,7 @@ export default {
               "image": {
                 "@id": `${this.meta.siteUrl}#logo`
               },
-              "servesCuisine": [ "Cheesesteaks" ], 
+              "servesCuisine": [ "Cheesesteaks", "Wings", "Vegan", "Gluten-Free", "Comfort Food" ], 
               "priceRange": "$",
               "paymentAccepted": "Cash, Credit Card",
               "currenciesAccepted": "USD",
